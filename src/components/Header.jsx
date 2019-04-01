@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HeaderCss from './../stylesheets/Header.module.css';
 import logo from '../assets/images/Logo-MusicED.png';
+import {Link,NavLink} from 'react-router-dom';
 
 class Header extends Component {
   
@@ -39,7 +40,7 @@ export const Options=()=>{
 
 const Navbar=()=>{
     const nav=['news','channels','events','jobs','projects','local','directory','resource','magazine'];
-    const navOptions=nav.map((opt,ind)=><span key={ind}>{opt}</span>)
+    const navOptions=nav.map((opt,ind)=><span key={ind}><Link to={opt}>{opt}</Link></span>)
     return(
         <div className={HeaderCss.flex2}>
             {navOptions}
