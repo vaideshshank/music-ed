@@ -12,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Header/>
-            <Route path="/home" component={Home}/>
+            <Route exact path="/" component={Home}/>
             <Route path="/news" component={News}/>
           <Footer/>
         </div>

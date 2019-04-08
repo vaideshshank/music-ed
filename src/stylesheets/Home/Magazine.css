@@ -1,0 +1,105 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.magazineParent img[alt="Placeholder"]{
+    width:370px;
+    height:260px;
+}
+
+.magazineParent>div:nth-child(1){
+    margin:0 auto;
+    width:86%;
+    margin-top:60px;
+    position:relative;
+}
+.magazineParent>div:nth-child(1)>span{
+    display: block;
+    text-transform:uppercase;
+    width:90%;
+}
+
+.magazineParent>div:nth-child(1)>hr{
+    display: block;
+    clear:left;
+    border:none;
+    border-bottom: 2px solid #e8e8e8;
+    margin-top:-20px;
+    margin-bottom:20px;
+}
+
+.magazineParent>div:nth-child(1)>span:nth-child(1){
+    font-family: Heebo-Medium;
+    font-size: 22px;
+    color:#101010;
+    margin-bottom: 43px;
+    width:300px;
+    float: left;
+}
+
+.magazineParent>div:nth-child(1)>span:nth-child(2){
+    font-family: Heebo-Medium;
+    color:#9b9b9b;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #9b9b9b;
+    width:90px;
+    float: right;
+    overflow: hidden;
+    text-align: right
+}
+
+.slider2{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:90%;
+    margin:0 auto;
+    padding-left:32px;
+}
+
+.slider2 div>div>span:nth-child(1){
+    display:block;
+    font-family: 'Heebo-Light';
+    color:#101010;
+    font-size:20px;
+    width:370px;
+    margin-top:15px;
+}
+
+.slider2 div>div>span:nth-child(2){
+    display: block;
+    font-family: 'Heebo-Regular';
+    color:#101010d7;
+    line-height: 28px;
+    font-size: 14px;
+    width: 370px;
+    margin-top:10px;
+    font-weight: bold;
+}
+
+.slick-prev::before{
+    content: "<";
+    color: black;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.slick-next::after{
+    content: ">";
+    color: black;
+    font-size: 30px;
+}

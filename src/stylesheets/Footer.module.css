@@ -9,8 +9,7 @@ footer{
     height:118px;
     color:white;
     font-family: Poppins-Regular;
-    position: absolute;
-    bottom: 0;
+    
     max-width:100%;
     align-items: center;
 }
