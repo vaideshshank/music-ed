@@ -1,0 +1,55 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.latNews{
+    margin:0 auto;
+    width:86%;
+    margin-top:60px;
+}
+
+.latNews span{display: block;}
+
+.latNews>span{
+    display:block;
+    font-family: Heebo-Medium;
+    font-size: 22px;
+    color:#101010;
+    margin-bottom: 43px;
+    width:300px;
+    text-transform: uppercase;
+}
+
+.slider4{display:flex;}
+
+.slider4 div:nth-child(1)>span:nth-child(1){
+    background-image: url(../../assets/images/Placeholder.png);
+    padding-top:350px;
+    background-size:cover;
+    padding-left:30px;
+    padding-bottom: 40px;
+    border-radius:10px;
+}
+
+.slider4 div:nth-child(1)>span:nth-child(1)>span:nth-child(1){
+    color:white;
+    font-family:Heebo-Medium;
+}
+
+.slider4 div:nth-child(1)>span:nth-child(1)>span:nth-child(2){
+    color:gray;
+}

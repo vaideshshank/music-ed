@@ -26,6 +26,7 @@ export default class Projects extends Component{
                     <span>{proj[val].topHead}</span>
                     <span>{proj[val].head}</span>
                     <span>{proj[val].content}</span>
+                    <button>Learn More</button>
                 </div>
             </div>
         )

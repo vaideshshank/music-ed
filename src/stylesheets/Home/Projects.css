@@ -16,16 +16,19 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.project img[alt="Placeholder"]{
+.project{background:rgba(159, 159, 159, 0.05);}
+
+.project .singleProject img[alt="Placeholder"]{
     width:370px;
     height:260px;
+    border:2px solid black;     
+    display: block;
 }
 
 .project>div:nth-child(1){
     margin:0 auto;
     width:86%;
     margin-top:60px;
-    position:relative;
 }
 .project>div:nth-child(1)>span{
     display: block;
@@ -69,9 +72,16 @@
     margin:0 auto;
     padding-left:32px;
 }
+.singleProject{
+    display:flex;
+    flex-direction: row;
+}
 
-
-.slider3 div>div>span:nth-child(1){
+.singleProject>div{
+    border:2px solid gray;
+    width:60%;
+}
+.singleProject>div>span:nth-child(1){
     display:block;
     font-family: 'Heebo-Light';
     color:#101010;
@@ -80,7 +90,7 @@
     margin-top:15px;
 }
 
-.slider3 div>div>span:nth-child(2){
+.singleProject>div>span:nth-child(2){
     display: block;
     font-family: 'Heebo-Regular';
     color:#101010d7;
@@ -89,6 +99,21 @@
     width: 370px;
     margin-top:10px;
     font-weight: bold;
+}
+
+.singleProject>div>button{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 50px;
+    padding-right:50px;
+    background:#ffc201;
+    border-radius:10px;
+    color:#674e00;
+    font-family:Heebo-Medium;
+    font-size:17px;
+    border:none;
+    margin-top:30px;
+
 }
 
 .slick-prev::before{
