@@ -16,14 +16,7 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.project{background:rgba(159, 159, 159, 0.05);}
-
-.project .singleProject img[alt="Placeholder"]{
-    width:370px;
-    height:260px;
-    border:2px solid black;     
-    display: block;
-}
+.project{}
 
 .project>div:nth-child(1){
     margin:0 auto;
@@ -40,7 +33,7 @@
     display: block;
     clear:left;
     border:none;
-    border-bottom: 2px solid #fae1e1;
+    border-bottom: 2px solid #e8e8e8;
     margin-top:-20px;
     margin-bottom:20px;
 }
@@ -61,31 +54,43 @@
     border-bottom: 3px solid #9b9b9b;
     width:70px;
     float: right;
-    overflow: hidden;
     text-align: right
 }
 
 .slider3{
-    display:flex;
-    flex-direction: row;
     width:90%;
     margin:0 auto;
     padding-left:32px;
-}
-.singleProject{
-    display:flex;
-    flex-direction: row;
+    background:rgba(159, 159, 159, 0.05);
+    margin-top:70px;margin-bottom:70px;
 }
 
-.singleProject>div{
-    border:2px solid gray;
-    width:60%;
+.slider3 .singleProject{
+    display:flex;
+    flex-direction: row;
+    clear:both;
+    width:100%;
+}
+
+.slider3 .singleProject>img{
+    width:45%;
+    height:350px;
+    display: inline-block;
+    float: left;
+}
+
+.slider3 .singleProject>div{
+    width:50%;
+    display:inline-block;
+    float:left;
+    height:350px;
+    margin-left:30px;
 }
 .singleProject>div>span:nth-child(1){
     display:block;
     font-family: 'Heebo-Light';
-    color:#101010;
-    font-size:20px;
+    color:#707070;
+    font-size:48px;
     width:370px;
     margin-top:15px;
 }
@@ -93,12 +98,19 @@
 .singleProject>div>span:nth-child(2){
     display: block;
     font-family: 'Heebo-Regular';
-    color:#101010d7;
+    color:#101010;
     line-height: 28px;
-    font-size: 14px;
-    width: 370px;
-    margin-top:10px;
+    font-size: 22px;
+    width: 500px;
+    margin-top:24px;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.singleProject>div>span:nth-child(3){
+    color:#101010;
+    margin-top:20px;
+    display: block;
 }
 
 .singleProject>div>button{
@@ -107,12 +119,13 @@
     padding-left: 50px;
     padding-right:50px;
     background:#ffc201;
-    border-radius:10px;
+    border-radius:7px;
     color:#674e00;
     font-family:Heebo-Medium;
-    font-size:17px;
     border:none;
     margin-top:30px;
+    display: block;
+    font-size: 20px;
 
 }
 

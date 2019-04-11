@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component,PureComponent } from 'react'
 import Placeholder from '../../assets/images/Placeholder.png';
 import Slider from 'react-slick';
 import '../../stylesheets/News/LatestNews.css'
 
 
-export default class LatestNews extends Component {
+export default class LatestNews extends PureComponent {
 
     constructor(){
         super();
@@ -24,7 +24,7 @@ export default class LatestNews extends Component {
   render() {
     var loadImage=this.state.imageContent.map((val,ind)=>{
         return(
-            <div key={ind}>
+            <div key={ind} className="content1">
                 <span>
                     <span>{val.heading}</span>
                     <span>{val.date}</span>
@@ -41,7 +41,7 @@ export default class LatestNews extends Component {
     return (
       <div class="latNews">
         <span>latest news</span>
-        <Slider {...this.props.settings} className="slider4">
+        <Slider className="slider4">
             {loadImage}   
         </Slider>
       </div>

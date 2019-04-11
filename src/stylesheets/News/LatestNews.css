@@ -36,20 +36,27 @@
 
 .slider4{display:flex;}
 
-.slider4 div:nth-child(1)>span:nth-child(1){
+.content1>span:nth-child(1){
     background-image: url(../../assets/images/Placeholder.png);
     padding-top:350px;
     background-size:cover;
     padding-left:30px;
     padding-bottom: 40px;
     border-radius:10px;
+    display:inline-block;
+    float:left;
 }
 
-.slider4 div:nth-child(1)>span:nth-child(1)>span:nth-child(1){
+.content1>span:nth-child(2){
+    display: inline-block;
+    float:left;
+}
+
+.content1>span:nth-child(1)>span:nth-child(1){
     color:white;
     font-family:Heebo-Medium;
 }
 
-.slider4 div:nth-child(1)>span:nth-child(1)>span:nth-child(2){
+.content1>span:nth-child(1)>span:nth-child(2){
     color:gray;
 }
