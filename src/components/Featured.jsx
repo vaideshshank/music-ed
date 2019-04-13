@@ -10,7 +10,7 @@ class Featured extends PureComponent{
 
     render(){
         return(
-            <div class="featured">
+            <div className="featured">
               <span>{this.props.heading}</span>
               {/* <div>
                 img

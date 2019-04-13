@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopEvents from './Events/TopEvents'; 
-import Featured from './Featured'; 
+import Featured from './Featured';
+import MultipleEvents from './Events/MultipleEvents';
 
 class Events extends Component {
   constructor(){
@@ -45,6 +46,7 @@ class Events extends Component {
       <React.Fragment>
       <TopEvents settings={this.state.settings}/>
       <Featured heading="featured events"/>
+      <MultipleEvents/>
       </React.Fragment>
     )
   }

@@ -15,11 +15,11 @@ class TopEvents extends Component {
   render() {
     var filler=this.state.topEvents.map((val,ind)=>{
         return (
-        <div key={ind} class="singleEve">
+        <div key={ind} className="singleEve">
             <div>
                 <span>{val.heading}</span>
-                <span><i class="fa fa-map-marker" aria-hidden="true"></i> {val.location}</span>
-                <span><i class="fa fa-calendar" aria-hidden="true"></i> {val.date}</span>
+                <span><i className="fa fa-map-marker" aria-hidden="true"></i> {val.location}</span>
+                <span><i className="fa fa-calendar" aria-hidden="true"></i> {val.date}</span>
                 <span>{val.content}</span>
                 <span>read more</span>
             </div>
