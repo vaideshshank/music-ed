@@ -1,0 +1,28 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+.featured{
+    background: black;
+    padding-left:10vw;
+    padding-right:10vw;
+    margin-top:70px;
+}
+
+.featured>span{
+    color: #ffc201;
+    font-size:48px;
+    font-family: Heebo-Light;
+    text-transform: capitalize;
+}

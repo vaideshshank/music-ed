@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import LatestNews from './News/LatestNews'; 
-import Featured from './Featured';
+import TopEvents from './Events/TopEvents'; 
+import Featured from './Featured'; 
 
-export class News extends Component {
+class Events extends Component {
   constructor(){
     super();
     this.state={
@@ -43,12 +43,11 @@ export class News extends Component {
   render() {
     return (
       <React.Fragment>
-        
-      <LatestNews settings={this.state.settings}/>
-      <Featured heading="featured news"/>
+      <TopEvents settings={this.state.settings}/>
+      <Featured heading="featured events"/>
       </React.Fragment>
     )
   }
 }
 
-export default News
+export default Events
