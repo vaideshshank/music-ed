@@ -1,32 +1,30 @@
 import React,{Component} from 'react';
 import Placeholder from '../../../assets/images/Placeholder.png';
+import '../../../stylesheets/Events/All.css'
+
 var {all} =require('../../../data/events.json');
 
 class All extends Component {
-  
-  allData=()=>{
-      var x=all.map((value,index)=>{
+    displayAll=all.map((value,index)=>{
         return(
-        <div key={index}>
+        <div key={index} className="singleItem1">
             <img src={Placeholder} alt=""/>
             <div>
                 <span>{value.heading}</span>
-                <span>{value.place}</span>
-                <span>{value.date}</span>
+                <span><i className="fa fa-map-marker" aria-hidden="true"></i> {value.place}</span>
+                <span><i className="fa fa-calender" aria-hidden="true"></i> {value.date}</span>
                 <span>{value.content}</span>
             </div>
           </div>
         )
-      })
-      return x; 
-  }
-
+    });
+    
   render() {
     //  console.log(all);
     
     return (
-      <div>
-        {this.allData}
+      <div className="alldisplay">
+        {this.displayAll}    
       </div>
     )
   }

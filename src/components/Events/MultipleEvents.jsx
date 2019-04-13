@@ -22,8 +22,9 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    width: '100%',
+    width: '90%',
     backgroundColor: theme.palette.background.paper,
+    margin:'0 auto'
   },
 });
 
@@ -51,7 +52,7 @@ class ScrollableTabsButtonAuto extends React.Component {
             variant="scrollable"
             scrollButtons="auto"
           >
-            <Tab label="All" />
+            <Tab label="All"/>
             <Tab label="Master Class" />
             <Tab label="Open Days" />
             <Tab label="Seminars" />
