@@ -22,7 +22,7 @@ class All extends Component {
     }
     
     pagination=[...Array(Math.ceil(this.props.data.length)).keys()].map((val,ind)=>{
-        return <div className="pageindex" key={ind} onClick={this.selectedPage}>{ind+1}</div>
+        return <div className="pageindex2" key={ind} onClick={this.selectedPage}>{ind+1}</div>
     })
   
     render() {
@@ -31,7 +31,7 @@ class All extends Component {
             console.log(this.state.index);
             return(
             <>
-            <div key={index} className="singleItem1">
+            <div key={index} className="singleItem2">
                 <img src={Placeholder} alt=""/>
                 <div>
                     <span>{value.heading}</span>
@@ -42,9 +42,9 @@ class All extends Component {
             </>)
         });
     return (
-      <div className="alldisplay">
+      <div className="alldisplay2">
         <div>{displayAll}</div> 
-        <div className="pagination">{this.pagination}</div> 
+        <div className="pagination2">{this.pagination}</div> 
       </div>
     )
   }

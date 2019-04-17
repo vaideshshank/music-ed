@@ -13,35 +13,36 @@
     src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
 }
 
-.alldisplay>div:nth-child(1){
+.alldisplay2>div:nth-child(1){
     display: flex;
     flex-wrap: wrap;
 }
 
-.alldisplay .singleItem1{
-    width:400px;
+.alldisplay2 .singleItem2{
+    width:350px;
+    margin:0 auto;
     margin-top:20px;
     margin-bottom: 20px;
 }
 
-.alldisplay .singleItem1>div{display:block;}
+.alldisplay2>div>.singleItem2>div{display:block;}
 
-.alldisplay .singleItem1>div>span{display:block;}
+.alldisplay2>div>.singleItem2>div>span{display:block;}
 
-.alldisplay .singleItem1>img{
+.alldisplay2 .singleItem2>img{
     width:270px;
     height: 181px;
     margin-right:15px;
     border-radius: 10px;
 }
 
-.alldisplay .singleItem1>div>span:nth-child(2){
+.alldisplay2 .singleItem2>div>span:nth-child(1){
     font-size:20px;
     font-family: Heebo-Regular;
     margin-bottom: 10px;
 }
 
-.alldisplay .singleItem1>div>span:nth-child(3){
+.alldisplay2 .singleItem2>div>span:nth-child(2){
     font-family: Heebo-Regular;
     color:#9b9b9b;
     font-size:14px;
@@ -50,35 +51,35 @@
     margin-bottom: 10px;
 }
 
-.alldisplay .singleItem1 i{
+.alldisplay2 .singleItem2 i{
     font-size:18px;
     margin-right: 0;
 }
 
-.alldisplay .singleItem1>div>span:nth-child(4){
+.alldisplay2 .singleItem2>div>span:nth-child(4){
     font-family: Heebo-Medium;
     color:#101010;
 }
 
-.alldisplay .singleItem1>div>span:nth-child(5){
+.alldisplay2 .singleItem2>div>span:nth-child(5){
     margin-top:10px;
     font-family:Heebo-Medium;
     color:#9b9b9b;
     font-size:14px;
 }
 
-.alldisplay .singleItem1>div>span:nth-child(5)>i{
+.alldisplay2 .singleItem2>div>span:nth-child(5)>i{
     color:#101010;
     font-weight: bold;
 }
 
-.pagination{
+.pagination2{
     display: flex;
     float:right;
     flex-direction: row;
 }
 
-.pageindex{
+.pageindex2{
     font-size:15px;
     height:25px;
     width:25px;
@@ -90,4 +91,4 @@
     font-weight: bold;
 }
 
-.pageindex:hover{cursor: pointer}
+.pageindex2:hover{cursor: pointer}
