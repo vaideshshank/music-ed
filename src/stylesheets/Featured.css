@@ -15,14 +15,85 @@
 
 .featured{
     background: black;
-    padding-left:10vw;
-    padding-right:10vw;
     margin-top:70px;
 }
 
 .featured>span{
+    display: block;
     color: #ffc201;
+    margin-left:10vw;
     font-size:48px;
     font-family: Heebo-Light;
     text-transform: capitalize;
+    margin-bottom: 80px;
+    padding-top:60px;    
 }
+
+.featured .imageNav{
+    display: block;
+    margin: 0 auto;
+    width:400px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.featured .imageNav>span{
+    display: inline-block;
+}
+
+.featured .imageNav>span:nth-child(1),
+.featured .imageNav>span:nth-child(3){
+    color:#707070;
+    font-weight: bold;
+    font-size:25px;
+    margin-left: 0;margin-right: 0;
+}
+
+.featured .imageNav>span:nth-child(2)>i{
+    font-size: 10px;
+    color:#707070;
+    position: relative;
+    top:-6px;
+}
+
+.featured .imageNav>span:nth-child(2)>i:nth-child(1){
+    color:#ffc201;
+    font-size:14px;
+}
+
+.imageCarousal{
+    width:100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.imageCarousal img{
+    height:250px;
+    width:400px;
+}
+
+.imageCarousal>div{
+    margin-left: 15px;
+    margin-right: 15px;
+    opacity: 0.4;
+}
+
+.imageCarousal>div:nth-child(2){
+    opacity: 1;
+}
+
+.imageCarousal>div:nth-child(2)>img{
+    height:275px;
+    width: 450px;
+}
+
+.imageCarousal span{
+    display: block;
+    font-family: Heebo-Medium;
+    
+}
+
+.imageCarousal span:nth-child(2){color:white;}
+.imageCarousal span:nth-child(3){color:#9b9b9b;font-size: 14px;}

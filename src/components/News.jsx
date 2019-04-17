@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import LatestNews from './News/LatestNews'; 
-import Featured from './Featured';
+import FeaturedNews from './News/FeaturedNews';
+import MoreNews from './News/MoreNews';
+var {featured} =require('./../data/news.json');
 
 export class News extends Component {
   constructor(){
@@ -43,9 +45,9 @@ export class News extends Component {
   render() {
     return (
       <React.Fragment>
-        
       <LatestNews settings={this.state.settings}/>
-      <Featured heading="featured news"/>
+      <FeaturedNews heading="featured news" imageNo="5" data={featured}/>
+      <MoreNews/>
       </React.Fragment>
     )
   }

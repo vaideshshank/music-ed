@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import Placeholder from '../assets/images/Placeholder.png';
+import Placeholder from '../../assets/images/Placeholder.png';
 import Slider from 'react-slick';
-import '../stylesheets/Featured.css';
+import '../../stylesheets/Featured.css';
 import $ from 'jquery'; 
 
 class Featured extends PureComponent{
@@ -36,7 +36,13 @@ class Featured extends PureComponent{
               <div className="imageCarousal"> 
                 {
                   images.slice(this.state.pointer,this.state.pointer+3).map((val,ind)=>{
-                      return <div><img src={Placeholder} alt="" key={ind}/></div>
+                      return (
+                          <div>
+                          <img src={Placeholder} alt="" key={ind}/>
+                          <span>{this.props.data[ind%3].heading}</span>
+                          <span>{this.props.data[ind%3].date}</span>
+                          </div>
+                      )
                     })
                 }
               </div>
