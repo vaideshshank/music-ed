@@ -7,7 +7,23 @@ class All extends Component {
         index:0
     }
 
-    
+    // displayAll=this.props.data.slice(this.state.index).map((value,index)=>{
+    //     console.log(this.state.index);
+    //     return(
+    //     <>
+    //     <div key={index} className="singleItem1">
+    //         <img src={Placeholder} alt=""/>
+    //         <div>
+    //             <span>{value.heading}</span>
+    //             <span><i className="fa fa-map-marker" aria-hidden="true"></i> {value.place}</span>
+    //             <span><i className="fa fa-calender" aria-hidden="true"></i> {value.date}</span>
+    //             <span>{value.content}</span>
+    //             <span><i className="fa fa-heart-o" aria-hidden="true"></i> Add to favourites</span>
+    //         </div>
+    //       </div>
+    //       <hr/>
+    //     </>)
+    // });
 
 
     selectedPage=(e)=>{
@@ -38,7 +54,7 @@ class All extends Component {
                 <div>
                     <span>{value.heading}</span>
                     <span><i className="fa fa-map-marker" aria-hidden="true"></i> {value.place}</span>
-                    <span><i className="fa fa-calendar" aria-hidden="true"></i> {value.date}</span>
+                    <span><i className="fa fa-calender" aria-hidden="true"></i> {value.date}</span>
                     <span>{value.content}</span>
                     <span><i className="fa fa-heart-o" aria-hidden="true"></i> Add to favourites</span>
                 </div>
@@ -46,7 +62,8 @@ class All extends Component {
               <hr/>
             </>)
         });
-    return (
+
+      return (
       <div className="alldisplay">
         {displayAll} 
         <div className="pagination">{this.pagination}</div> 

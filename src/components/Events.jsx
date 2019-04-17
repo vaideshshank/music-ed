@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import TopEvents from './Events/TopEvents'; 
 import Featured from './Featured';
 import MultipleEvents from './Events/MultipleEvents';
+import Extended from './Events/Extended';
+var {extended} =require('../data/events.json');
+
 
 class Events extends Component {
   constructor(){
@@ -47,6 +50,7 @@ class Events extends Component {
       <TopEvents settings={this.state.settings}/>
       <Featured heading="featured events"/>
       <MultipleEvents/>
+      <Extended tabs={['events by region','events by calender']} data={extended}/>
       </React.Fragment>
     )
   }
