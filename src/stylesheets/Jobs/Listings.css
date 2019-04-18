@@ -1,0 +1,216 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+.contentBox i{margin:0;}
+
+.listingsFilter{
+    width:85%;
+    margin:0 auto;
+}
+
+.listingsFilter span{display: block;}
+
+.listingsFilter .heading{
+    font-size:22px;
+    color:#101010;
+    font-family: Heebo-Medium;
+    text-transform: uppercase;
+}
+
+.listingsFilter hr{
+    border:none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.24);
+}
+
+.listingsFilter .contentBox{
+    display: grid;
+    grid-template-columns: 30% 60%;
+}
+
+
+.contentBox>div:nth-child(1){padding-left: 20px;}
+.contentBox>div:nth-child(1)>span{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #9b9b9b;
+    font-family: Heebo-Medium;
+    margin-top:40px;
+}
+
+.contentBox>div>div>span{
+    color:#101010;
+    font-family: Heebo-Regular;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+.contentBox .availability>div{
+    height:100px;
+    display: flex;
+    margin-top:10px;
+}
+
+.contentBox select{
+    width:150px;
+}
+
+.contentBox .skills .items>div{
+    background-color: #e4e4e4;
+}
+
+.contentBox .skills .items>div{padding: 5px;}
+.contentBox .skills .items>div>span{
+    display: inline-block;
+    min-width:75px;
+    max-width: 200px;
+    font-size: 12px;
+    font-family: Heebo-Medium;
+    color:white;
+    padding:2px;
+    background: black;
+    border-radius: 5px;
+    margin: 3px;
+    word-wrap: break-word;
+}
+
+.contentBox .skills .items>div>span>i{
+    font-size: 18px;
+    float: right;
+    margin: 0;
+    color: #9b9b9b;
+    margin-left:10px;
+    cursor: pointer;
+}
+
+.contentBox .skills .items>div>span>i:hover{
+    color: #9b9b9baf;
+}
+
+.contentBox .listings{margin-left: 5%;}
+
+.contentBox .listings>div:nth-child(1)>div{margin-top:20px;margin-bottom: 20px;}
+
+.contentBox .listings>div:nth-child(1) input[type='text']{
+    min-width:535px;
+    padding:7px;
+    font-family: Heebo-Regular;
+    color:#101010;  
+    box-shadow: 0 5px 15px -2px rgba(128, 128, 128, 0.651);
+    border:none;
+    border:1px solid rgba(128, 128, 128, 0.349)
+}
+
+.contentBox .listings>div:nth-child(1) button{
+    padding:7px;
+    min-width: 100px;
+    border:1px solid rgba(128, 128, 128, 0.336);
+    font-family: Heebo-Regular;
+    color:#101010;  
+    border:none;
+    background-color: #0099fa;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.contentBox .listings>div:nth-child(1) button:hover{
+    background-color: #0576bdc7;
+}
+
+.contentBox .listings .jobs{
+    padding:30px;
+    border:2px solid #e4e4e4;
+    margin-top:32px;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(1){
+    display: inline-block;
+    color:#000000;
+    font-size:20px;
+    font-family: Heebo-Regular;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(2){display:inline-block;}
+.contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(2)>span{
+    display: inline-block;
+    background: #e80622;
+    border-radius: 5px;
+    color:white;
+    font-size: 12px;
+    font-family: Heebo-Medium;
+    padding: 2px;
+    padding-right: 10px;padding-left: 10px;
+    margin-right:5px;margin-left: 5px;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(3){
+    margin-top:5px;
+    display:inline-block;
+    float:right;
+    font-family:Heebo-Medium;
+    color:#101010;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(2)>span:nth-child(1){
+    display:inline-block;
+    color:#0099fa;
+    font-size:14px;
+    font-family: Heebo-Regular;
+    margin-right:20px;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(2)>span:nth-child(2){
+    display:inline-block;
+    color:#9b9b9b;
+    font-size:14px;
+    font-family: Heebo-Regular;
+}
+
+.contentBox .listings .jobs>div>div:nth-child(2)>span:nth-child(3){
+    display:inline-block;
+    color:#9b9b9b;
+    font-size:12px;
+    font-family: Heebo-Regular;
+    float:right;
+}
+
+.contentBox .listings .jobs>div>span:nth-child(3){
+    color:#101010;
+    font-size:14px;
+    font-family: Heebo-Regular;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.contentBox .listings .jobs>div>span:nth-child(4)>span{
+    display: inline-block;
+    color:white;
+    background: black;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: Heebo-Medium;
+    padding: 2px;
+    padding-right: 10px;padding-left: 10px;
+    margin-right:5px;margin-left: 5px;
+    margin-bottom: 35px;
+}
+
+.contentBox .listings .jobs hr{
+    border:none;
+    border-bottom: 2px solid rgba(155, 155, 155, 0.2);
+    margin-bottom:35px;
+}

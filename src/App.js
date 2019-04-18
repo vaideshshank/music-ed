@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import News from './components/News';
 import Events from './components/Events';
+import Jobs from './components/Jobs';
 import {BrowserRouter,Route} from 'react-router-dom'
 
 
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route path="/news" component={News}/>
             <Route path="/events" component={Events}/>
+            <Route path="/jobs" component={Jobs}/>
           <Footer/>
         </div>
       </BrowserRouter>
