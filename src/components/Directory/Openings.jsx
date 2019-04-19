@@ -17,31 +17,43 @@ const Locations=(props)=>{
     var selectStars=(e)=>{
         var i,parent=e.target.parentNode,
             children=parent.childNodes;
-        for(i=0; i<5; i++){
+        for(i=4; i>=0; i--){
             children[i].className="fa fa-star";
             children[i].style.color="#ffc201";
             if(children[i]==e.target) break;
         }
-        for(i+=1; i<5; i++){
+        for(i-=1; i>=0; i--){
             children[i].className="fa fa-star-o";
             children[i].style.color="black";
         }
-        //setTimeout(()=>{/**kc4lr;4 */},1000)
+        setTimeout(()=>{/**kc4lr;4 */},1000)
     }
 
     var outlineStars=(e)=>{
         var i,parent=e.target.parentNode,
             children=parent.childNodes;
-        for(i=0; i<5; i++){
+        for(i=4; i>=0; i--){
             if(children[i].className!="fa fa-star"){
                 children[i].className="fa fa-star-o";
             }
             children[i].style.color="#ffc201";
             if(children[i]==e.target) break;
         }
-        for(i+=1; i<5; i++){
+        for(i-=1; i>=0; i--){
             children[i].className="fa fa-star-o";
             children[i].style.color="black";
+        }
+    }
+
+    var unselectStars=e=>{
+        var i,parent=e.target.parentNode,
+            children=parent.childNodes;
+        for(i=0; i<5; i++){
+            if(children[i].className=="fa fa-star"){
+                break;
+            }
+            children[i].style.color="black";
+            
         }
     }
 
@@ -69,7 +81,7 @@ const Locations=(props)=>{
                                         <span><i className="fa fa-map-marker" aria-hidden="true"></i> {val.location}</span>
                                         <span>{[...Array(5).keys()].map((val,ind)=>{
                                             return(
-                                                <i className="fa fa-star-o" aria-hidden="true" key={ind} onClick={selectStars} onMouseOver={outlineStars}></i>
+                                                <i className="fa fa-star-o" aria-hidden="true" key={ind} onClick={selectStars} onMouseOver={outlineStars} onMouseOut={unselectStars}></i>
                                             )
                                         })}
                                         </span>

@@ -8,7 +8,7 @@ class Directory extends Component{
     render(){
         return(
             <div id="directory">
-            <span class="title">directory</span>
+            <span class="title">listings</span>
             <div class="searchBar">
                 <input type="text" className="search" placeholder="Search for Jobs"/>
                 <button>Search</button>
