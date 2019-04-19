@@ -1,0 +1,68 @@
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+
+
+
+.directoryItems>select{
+    background: #e4e4e4;
+    padding:5px;
+    font-family:Heebo-Regular;
+    display: block;
+    text-align: left;
+    width:150px;
+    margin-top:20px;
+}
+
+.directoryItems hr{
+    border:none;
+    border-bottom:2px solid rgba(155, 155, 155, 0.2);
+}
+
+.card{display:flex;}
+.card i{margin:0;}
+
+
+.card>img{
+    width:70px;
+    height:52px;
+    margin-right:20px;
+}
+
+.directoryItems>div{
+    margin-top:30px;
+}
+.card>div{
+    width:100%;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.card>div>div{text-align:left;}
+
+.card>div>div:nth-child(1)>span:nth-child(1){
+    font-size:20px;
+    font-family: Heebo-Regular;
+    display: inline-block;
+    text-align: left;
+}
+
+.card>div>div:nth-child(1)>span:nth-child(2){float: right; cursor: pointer;}
+
+.card>div>div:nth-child(2)>span:nth-child(1),.card>div>div:nth-child(2)>span:nth-child(2){
+    font-size: 14px;
+    color:#9b9b9b;
+    margin-right:20px;
+}
+.card>div>div:nth-child(2)>span:nth-child(3){float: right;}
+.card>div>div:nth-child(2)>span:nth-child(3)>i{
+    margin-left:3px;
+    cursor: pointer;;
+}

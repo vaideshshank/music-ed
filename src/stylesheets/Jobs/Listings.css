@@ -18,6 +18,8 @@
 .listingsFilter{
     width:85%;
     margin:0 auto;
+    margin-top:70px;
+    margin-bottom: 10px;
 }
 
 .listingsFilter span{display: block;}

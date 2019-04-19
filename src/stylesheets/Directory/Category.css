@@ -1,0 +1,56 @@
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+.category{
+    
+    margin:0 auto;
+}
+.category>span{
+    display: block;
+    text-align: center;
+    font-family:Heebo-Regular;
+    font-size:20px;
+    margin-top:40px;
+    margin-bottom: 30px;
+}
+
+.category>div:nth-child(2){
+    display:flex;
+    justify-content: space-between;
+}
+
+.singleCategory>div:nth-child(2)>div{
+    margin-top:10px;margin-bottom: 10px;
+}
+
+.singleCategory{
+    min-width: 260px;
+    box-shadow: 0 5px 10px -2px gray; 
+}
+.singleCategory>div:nth-child(1){
+    text-align: left;
+    font-family: Heebo-Medium;
+    margin:10px;
+}
+
+.singleCategory>div:nth-child(2)>div>span{
+    color:#9b9b9b;
+    font-family: Heebo-Regular;
+    font-size:14px;
+    
+}
+
+.singleCategory>div:nth-child(2)>div>span:nth-child(2){float: right;}
+
+.singleCategory>div:nth-child(2){
+    text-align: left;
+    margin-left:20px;margin-right:20px;
+    margin-top:8px;margin-bottom: 8px;
+}

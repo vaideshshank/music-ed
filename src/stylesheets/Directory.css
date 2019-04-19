@@ -1,0 +1,59 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+#directory{
+    width:85%;
+    margin:0 auto;
+}
+
+.title{
+    display:block;
+    font-size:22px;
+    font-family: Heebo-Medium;
+    color:#101010;
+    text-transform: uppercase;
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+
+
+.searchBar{text-align:center;}
+
+.searchBar input[type='text']{
+    min-width:535px;
+    padding:7px;
+    font-family: Heebo-Regular;
+    color:#101010;  
+    box-shadow: 0 5px 15px -2px rgba(128, 128, 128, 0.651);
+    border:none;
+    border:1px solid rgba(128, 128, 128, 0.349)
+}
+
+.searchBar button{
+    padding:7px;
+    min-width: 100px;
+    border:1px solid rgba(128, 128, 128, 0.336);
+    font-family: Heebo-Regular;
+    color:white;  
+    border:none;
+    background-color: #0099fa;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.searchBar button:hover{
+    background-color: #0576bdc7;
+}
