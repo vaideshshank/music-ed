@@ -1,0 +1,95 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+.articlesSection{
+    width:85%;
+    margin:0 auto;
+    margin-top: 60px;
+}
+
+
+.articlesSection>span{
+    display:block;
+    font-size:22px;
+    font-family: Heebo-Medium;
+    text-transform: uppercase;
+}
+
+.slick-prev::before{
+    content: "<";
+    color: black;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.slick-next::after{
+    content: ">";
+    color: black;
+    font-size: 30px;
+}
+
+.slider5>div img{
+    height:370px;
+    width:370px;
+    border-radius: 50%;
+    display: block;
+}
+
+.slider5 .singleCard{
+    display: flex;
+}
+
+.slider5 .singleCard>span:nth-child(1){
+    width:55%;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top:80px;
+}
+
+.slider5 .singleCard>span:nth-child(1)>span:nth-child(1){
+    font-family: Heebo-Medium;
+    color:#101010;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+    width:80%;
+}
+
+.slider5 .singleCard>span:nth-child(1)>span:nth-child(2){
+    color:#9b9b9b;
+    font-size: 14px;
+    font-family: Heebo-Medium;
+    
+}
+
+.slider5 .singleCard>span:nth-child(1)>span:nth-child(3){
+    color:#9b9b9b;
+    font-size:12px;
+    font-family:Heebo-Medium;
+    padding-left:10px;padding-right:10px;
+    background: black;
+    border-radius:5px;
+    margin-left:5px;
+}
+
+.slider5 .singleCard>span:nth-child(1)>span:nth-child(4){
+    display:block;
+    margin-top: 5px;
+    line-height:25px;
+}
+
+.slider5 .singleCard>span:nth-child(2){
+    float:right;
+}
