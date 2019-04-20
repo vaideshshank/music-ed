@@ -1,0 +1,62 @@
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+.signin{background: black;}
+.signin>img{
+    width:700px;
+    display: block;
+    margin:0 auto;
+    padding-top:150px;
+}
+.signinForm{
+    position: relative;
+    top: -500px;
+    left:-50px;
+}
+.signinForm>span{
+    display: block;
+    color:#707070;
+    font-size:48px;
+    font-family: Heebo-Light;
+    text-align: center;
+}
+
+.signinForm form{
+    color:white;
+    width:350px;
+    margin:0 auto;
+}
+.signinForm form>span{
+    color:red;
+}
+
+.signinForm form>button{
+    background: #ffc201;
+    border:none;
+    width:150px;
+    padding:8px;
+    border-radius: 8px;
+    display: block;
+    margin:0 auto;
+    margin-top:50px;
+    cursor: pointer;
+}
+
+.signinForm form>button:hover{background: #ffc401c9;}
+.signinForm form>button:active{background: #ffc40196}
+.signinForm form>input:not([type="checkbox"]){
+    width:300px;
+    border:none;
+    padding:5px;
+    background: #0d0d0d;
+    margin-top:10px;
+    color:white;
+    font-family: Heebo-Light;
+    width:330px;
+}
+
+input:focus,button:focus {
+    outline: none;
+}

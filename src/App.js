@@ -7,6 +7,8 @@ import Events from './components/Events';
 import Jobs from './components/Jobs';
 import Directory from './components/Directory';
 import Magazine from './components/Magazine';
+import Signup from './components/Signup/Signup';
+import Signin from './components/Signin/Signin';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 
@@ -26,6 +28,8 @@ class App extends Component {
             <Route path="/jobs" component={Jobs}/>
             <Route path="/directory" component={Directory}/>
             <Route path="/magazine" component={Magazine}/>
+            <Route path="/signup" component={Signup}/>
+            <Route path="/signin" component={Signin}/>
           <Footer/>
         </div>
       </BrowserRouter>

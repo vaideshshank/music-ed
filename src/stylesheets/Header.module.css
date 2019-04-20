@@ -3,6 +3,11 @@
     src:url('../fonts/Poppins-SemiBold.otf') format('opentype');
 }
 
+@font-face{
+    font-family:'Poppins-Light';
+    src:url('../fonts/Poppins-Light.otf') format('opentype');
+}
+
 .container{
     background-color: #ffc201;
 }
@@ -12,18 +17,21 @@
     display: flex;
     margin:0 auto;
     align-items: center;
+    cursor: pointer;
 }
 
 .image{
     /* display: block;
     margin: 0 auto; */
-    filter: grayscale(0.9);
-    -webkit-filter: grayscale(0.9);
+    /* filter: grayscale(0.9);
+    -webkit-filter: grayscale(0.9); */
     width:100px;
 }
 
 .title{
-    font-family: Poppins-SemiBold;
+    font-family: Poppins-Light;
+    letter-spacing: 1px;
+    font-weight: bold;
     font-size:25px;
     display:inline-block;
     position: relative;
@@ -33,7 +41,7 @@
     font-size: 11px;
     position: absolute;
     right:0;
-    top:25px;
+    top:30px;
     opacity: 0.4;
 }
 
@@ -43,10 +51,15 @@
     top:25px;
     color:#9c7700;
 }
-
+.container>div:nth-child(2) a{text-decoration: none;}
 .container>div:nth-child(2)>span{
     margin-right:10px;
     margin-left:10px;
+}
+
+.container>div:nth-child(2)>span:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .flex2{

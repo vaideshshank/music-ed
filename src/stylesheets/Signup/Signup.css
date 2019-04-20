@@ -1,0 +1,82 @@
+@font-face{
+    font-family:'Heebo-Light';
+    src:url('../../fonts/Heebo/Heebo-Light.ttf') format('truetype');
+}
+
+
+.signup{
+    background: black;
+}
+
+.signup .signupTitle{
+    color:#707070;
+    font-size:40px;
+    width:483px;
+    font-family: Heebo-Light;
+    padding: 60px;
+    
+}
+
+.signup>div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.signup img{
+    min-width:400px;
+    margin-top:-180px;
+    margin-right: 30px;
+}
+
+.signupForm{
+    position: relative;
+    left:500px;
+    margin-top:-60px;
+}
+
+.signupForm>span{
+    display: block;
+    font-family: Heebo-Light;
+    font-size:48px;
+    color:#707070;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.signupForm form>span{
+    color:red;
+}
+
+.signupForm form{
+    color:white;
+}
+
+.signupForm form>button{
+    background: #ffc201;
+    border:none;
+    width:150px;
+    padding:8px;
+    border-radius: 8px;
+    display: block;
+    margin:0 auto;
+    margin-top:50px;
+    cursor: pointer;
+}
+
+.signupForm form>button:hover{background: #ffc401c9;}
+.signupForm form>button:active{background: #ffc40196}
+.signupForm form>input:not([type="checkbox"]){
+    width:300px;
+    border:none;
+    padding:5px;
+    background: #0d0d0d;
+    margin-top:10px;
+    margin-bottom: 30px;
+    color:white;
+    font-family: Heebo-Light;
+}
+
+input:focus,button:focus {
+    outline: none;
+}
