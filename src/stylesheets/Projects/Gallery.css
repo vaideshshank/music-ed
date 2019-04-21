@@ -1,0 +1,36 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+
+.slider7{
+    width:85%;
+    margin:0 auto;
+    justify-content: space-between;
+    margin-top:30px;
+}
+
+.slider7 img{
+    opacity: 0.5;
+    height:200px;
+    width:250px;
+    border-radius:10px;
+    margin: 0 auto;
+}
+
+.slider7 .singleImg{
+    height:200px;
+}
+
+
+.slider7 div>span{
+    position: relative;
+    top:-40px;
+    left:30px;
+    width:230px;
+    display: inline-block;
+    font-family: Heebo-Medium;
+    color:white;
+    font-size:14px;
+}

@@ -9,6 +9,7 @@ import Directory from './components/Directory';
 import Magazine from './components/Magazine';
 import Signup from './components/Signup/Signup';
 import Signin from './components/Signin/Signin';
+import Projects from './components/Projects';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route path="/magazine" component={Magazine}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signin" component={Signin}/>
+            <Route path="/projects" component={Projects}/>
           <Footer/>
         </div>
       </BrowserRouter>
