@@ -40,25 +40,25 @@
     font-size: 30px;
 }
 
-.slider5>div img{
+.slider6>div img{
     height:370px;
     width:370px;
     border-radius: 50%;
     display: block;
 }
 
-.slider5 .singleCard{
+.slider6 .singleCard{
     display: flex;
 }
 
-.slider5 .singleCard>span:nth-child(1){
+.slider6 .singleCard>span:nth-child(1){
     width:55%;
     display: inline-block;
     margin-left: 50px;
     margin-top:80px;
 }
 
-.slider5 .singleCard>span:nth-child(1)>span:nth-child(1){
+.slider6 .singleCard>span:nth-child(1)>span:nth-child(1){
     font-family: Heebo-Medium;
     color:#101010;
     font-size: 22px;
@@ -67,14 +67,14 @@
     width:80%;
 }
 
-.slider5 .singleCard>span:nth-child(1)>span:nth-child(2){
+.slider6 .singleCard>span:nth-child(1)>span:nth-child(2){
     color:#9b9b9b;
     font-size: 14px;
     font-family: Heebo-Medium;
     
 }
 
-.slider5 .singleCard>span:nth-child(1)>span:nth-child(3){
+.slider6 .singleCard>span:nth-child(1)>span:nth-child(3){
     color:#9b9b9b;
     font-size:12px;
     font-family:Heebo-Medium;
@@ -84,12 +84,12 @@
     margin-left:5px;
 }
 
-.slider5 .singleCard>span:nth-child(1)>span:nth-child(4){
+.slider6 .singleCard>span:nth-child(1)>span:nth-child(4){
     display:block;
     margin-top: 5px;
     line-height:25px;
 }
 
-.slider5 .singleCard>span:nth-child(2){
+.slider6 .singleCard>span:nth-child(2){
     float:right;
 }

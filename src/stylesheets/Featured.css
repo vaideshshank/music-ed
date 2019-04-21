@@ -48,6 +48,12 @@
     font-weight: bold;
     font-size:25px;
     margin-left: 0;margin-right: 0;
+    cursor:pointer;
+}
+
+.featured .imageNav>span:nth-child(1):hover,
+.featured .imageNav>span:nth-child(3):hover{
+    color:#7070709c
 }
 
 .featured .imageNav>span:nth-child(2)>i{

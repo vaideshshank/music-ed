@@ -7,7 +7,7 @@ const Magazine=(props)=>{
     return(
         <div class="articlesSection">
             <span>Latest Articles</span>
-            <Slider className="slider5">
+            <Slider className="slider6">
                 {
                     props.data.map((val,ind)=>{
                         return(
