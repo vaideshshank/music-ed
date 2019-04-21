@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import Articles from "./Magazine/Articles";
+import MagazinePics from './Magazine/MagazinePics';
+
 var {articles}=require('../data/articles.json');
 
 class Magazine extends Component{
@@ -47,6 +49,7 @@ class Magazine extends Component{
         return(
             <div>
                 <Articles settings={this.state.settings} data={articles}/>
+                <MagazinePics/>
             </div>
         )
     }

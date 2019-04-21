@@ -1,0 +1,50 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family:'Heebo-Regular';
+    src:url('../../fonts/Heebo/Heebo-Regular.ttf') format('truetype');
+}
+
+.allMagazine{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.allMagazine>div{width:250px;}
+.allMagazine img{
+    width:250px;
+    height:200px;
+}
+
+.allMagazine>div>span:nth-child(2){
+    font-family: Heebo-Medium;
+    display: block;
+    color:#101010;
+}
+
+.allMagazine>div>span:nth-child(3){
+    font-family: Heebo-Regular;
+    font-size:14px;
+    color:#9b9b9b;
+}
+
+.allMagazine>div>div{
+    position: relative;
+}
+
+.allMagazine>div>div>i{
+    position: absolute;
+    right:-15px;
+    top:8px;
+    font-size:20px;
+    background: rgba(0,0,0,0.6);
+    padding-right:10px;padding-left:10px;
+    padding-top:7px;padding-bottom: 7px;
+    border-radius: 50%;
+    color:rgba(255, 255, 255, 0.705);
+    cursor:pointer;
+}
