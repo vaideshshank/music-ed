@@ -10,6 +10,7 @@ import Magazine from './components/Magazine';
 import Signup from './components/Signup/Signup';
 import Signin from './components/Signin/Signin';
 import Projects from './components/Projects';
+import Resource from './components/Resource';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signin" component={Signin}/>
             <Route path="/projects" component={Projects}/>
+            <Route path="/resource" component={Resource}/>
           <Footer/>
         </div>
       </BrowserRouter>

@@ -1,0 +1,49 @@
+{
+    "summerSchool":[{
+        "imageUrl":"",
+        "title":"World Symposium on Choral Music 2020"
+    },{
+        "imageUrl":"",
+        "title":"Grand Union Youth Orchestra Summer School"
+    },{
+        "imageUrl":"",
+        "title":"Ingenium Academy Summer School 2019"
+    },{
+        "imageUrl":"",
+        "title":"Tring Park Musical Theatre Summer Course 2019"
+    },{
+        "imageUrl":"",
+        "title":"Orchestra Summer School"
+    },{
+        "imageUrl":"",
+        "title":"Union Orchestra Summer School"
+    },{
+        "imageUrl":"",
+        "title":"Park Musical Theatre Summer Course"
+    }],
+
+    "promotedSchool":[{
+        "imageUrl":"",
+        "heading":"World Symposium on Choral Music 2020",
+        "content":"Drawing together the leading choirs, conductors, composers and administrators from all over the planet for a superlative experience of concerts, seminars and workshops, the Symposium has also come the Symposium has also come to…read more"
+    },{
+        "imageUrl":"",
+        "heading":"London Youth Coir",
+        "content":"The Symposium is for composers keen to see what choirs want and what they can achieve, for choral managers, administrators and accompanists who want to swap ideas with their peers people who just want to consume a varied choral treats.…read more"
+    },{
+        "imageUrl":"",
+        "heading":"Young Choral Academy of Manchester",
+        "content":"Drawing together the leading choirs, conductors, composers and administrators from all over the planet for a superlative experience of concerts, seminars and workshops, the Symposium has also come the Symposium has also come to…read more"
+    }],
+
+    "holidayCourse":[{
+        "imageUrl":"",
+        "title":"World Symposium on Choral Music 2020"
+    },{
+        "imageUrl":"",
+        "title":"World Symposium on Choral Music 2020"
+    },{
+        "imageUrl":"",
+        "title":"World Symposium on Choral Music 2020"
+    }]
+}

@@ -1,0 +1,53 @@
+@font-face{
+    font-family:'Heebo-Medium';
+    src:url('../../fonts/Heebo/Heebo-Medium.ttf') format('truetype');
+}
+
+.holidayCourse{
+    width:85%;
+    margin:0 auto;
+    margin-top: 70px;
+}
+
+.holidayCourse>span{
+    display: block;
+    color:#101010;
+    font-size:22px;
+    font-family: Heebo-Medium;
+    text-transform: uppercase;
+}
+    
+.holidayCourse>hr{
+    border:none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.24);
+    margin-top: 20px;
+}
+.holidayCourse .holCourseImgs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.holidayCourse .holCourseImgs>div{
+    width:270px;
+    margin-bottom: 12.5px;
+    margin-right: 12.5px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 10px -6px gray;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.holidayCourse .holCourseImgs>div:hover{
+    box-shadow: 0 4px 15px -1px gray;
+}
+
+.holidayCourse .holCourseImgs>div>img{
+    height:200px;
+    width:270px;
+}
+
+.holidayCourse .holCourseImgs>div>div{
+    padding-top:10px;
+    padding-bottom: 10px; 
+}
