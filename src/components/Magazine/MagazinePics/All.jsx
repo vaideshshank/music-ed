@@ -22,11 +22,11 @@ const All=(props)=>{
                     return(
                         <div key={ind}>
                             <div>
-                                <img src={Placeholder} alt=""/>
+                                <img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/>
                                 <i class="fa fa-bookmark-o" aria-hidden="true" onClick={select}></i>
                             </div>
-                            <span>{val.heading}</span>
-                            <span>{val.date}</span>
+                            <span>{val.title}</span>
+                            <span>{val.created_on}</span>
                         </div>
                     )
                 })

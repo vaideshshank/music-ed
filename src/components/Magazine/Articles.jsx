@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import '../../stylesheets/Articles/Articles.css';
 
 const Magazine=(props)=>{
+
     return(
         <div class="articlesSection">
             <span>Latest Articles</span>
@@ -13,12 +14,12 @@ const Magazine=(props)=>{
                         return(
                             <div key={ind} class="singleCard">
                                 <span>
-                                    <span>{val.heading}</span>
-                                    <span>{val.date}</span>
-                                    <span>{val.tag}</span>
-                                    <span>{val.content}</span>
+                                    <span>{val.title}</span>
+                                    <span>{val.created_on}</span>
+                                    <span>London Music</span>
+                                    <span>{val.description}</span>
                                 </span>
-                                <span><img src={Placeholder} alt=""/></span>
+                                <span><img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/></span>
                             </div>
                         )
                     })

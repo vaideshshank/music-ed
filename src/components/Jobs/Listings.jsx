@@ -122,21 +122,24 @@ class Listings extends Component {
                                     <div>
                                         <div>
                                         <span>{val.title}</span>
-                                        <span>{val.jobType.map((value,index)=>{
+                                        <span>
+                                            {/* {val.jobType.map((value,index)=>{
                                                 return <span key={index}>{value}</span>
-                                            })}
+                                            })} */}
+                                            <span>{val.title}</span>
                                         </span>
-                                        <span>{val.cost}</span>
+                                        <span>{val.id} $/hr</span>
                                         </div>
                                         <div>
-                                        <span><i class="fa fa-building" aria-hidden="true"></i> {val.organization}</span>
-                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i> {val.place}</span>
-                                        <span>{val.postDate}</span>
+                                        <span><i class="fa fa-building" aria-hidden="true"></i> {val.company_name}</span>
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i> {/*val.place*/}London</span>
+                                        <span>{val.created_on}</span>
                                         </div>
-                                        <span>{val.content}</span>
-                                        <span>{val.tags.map((value,index)=>{
+                                        <span>{val.description}</span>
+                                        <span>{/*val.tags.map((value,index)=>{
                                                 return <span key={index}>{value}</span>
-                                            })}
+                                            })*/}
+                                            <span>{val.type}</span>
                                         </span>
                                         <hr/>
                                     </div>

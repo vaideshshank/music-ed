@@ -7,7 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import '../../stylesheets/Events/MultipleEvents.css';
 import All from './MagazinePics/All';
+import axios from 'axios';
 var {all}=require('../../data/magazine.json');
+
 
 
 
@@ -61,12 +63,25 @@ const styles = theme => ({
 class ScrollableTabsButtonAuto extends React.Component {
   state = {
     value: 0,
+    all:[]
   };
 
   handleChange = (event, value) => {
     this.setState({ value });
   };
 
+  componentDidMount(){
+    axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news")
+    .then(({data})=>{
+        //console.log(data.data);
+        this.setState(prevState=>({
+            ...this.state,
+            all:[...data.data]
+        }),()=>{
+            //console.log(this.state.imageContent);
+        })
+    })
+  }
   render() {
     const { classes } = this.props;
     const { value } = this.state;
@@ -90,7 +105,7 @@ class ScrollableTabsButtonAuto extends React.Component {
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>
-            <All data={all}/>
+            <All data={this.state.all}/>
         </TabContainer>}
         {value === 1 && <TabContainer>
             e.x,er

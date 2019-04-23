@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
 import Placeholder from '../../../assets/images/Placeholder.png';
-import '../../../stylesheets/News/All.css'
+import '../../../stylesheets/News/All.css';
+import axios from 'axios';
 
 
 class All extends Component {
     state={
-        index:0
+        index:0,
+        data:[]
     }
 
     selectedPage=(e)=>{
@@ -24,18 +26,32 @@ class All extends Component {
     pagination=[...Array(Math.ceil(this.props.data.length)).keys()].map((val,ind)=>{
         return <div className="pageindex2" key={ind} onClick={this.selectedPage}>{ind+1}</div>
     })
+
+    componentWillMount(){
+        axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news&page=1")
+        .then(({data})=>{
+            //console.log(data.data);
+            this.setState(prevState=>({
+                ...this.state,
+                data:[...data.data]
+            }),()=>{
+                console.log(this.state.imageContent);
+            })
+        })
+
+    }
   
     render() {
-        console.log(this.props.data);
-        var displayAll=this.props.data.map((value,index)=>{
+        console.log(this.state.data);
+        var displayAll=this.state.data.map((value,index)=>{
             console.log(this.state.index);
             return(
             <>
             <div key={index} className="singleItem2">
-                <img src={Placeholder} alt=""/>
+                <img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/>
                 <div>
-                    <span>{value.heading}</span>
-                    <span><i className="fa fa-calendar" aria-hidden="true"></i> {value.date}</span>
+                    <span>{value.title}</span>
+                    <span><i className="fa fa-calendar" aria-hidden="true"></i> {value.created_on}</span>
                 </div>
             </div>
              

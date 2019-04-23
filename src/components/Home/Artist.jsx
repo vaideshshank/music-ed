@@ -18,7 +18,7 @@ const Artist=()=>{
                 <span>{content}</span>
                 <div>View Collection</div>
             </div>
-            <img src={Placeholder} alt="Placeholder"/>
+            <img src="http://142.93.38.157:5000/static/img/default.jpg" alt="Placeholder"/>
         </div>
     )
 }

@@ -21,9 +21,9 @@ import axios from 'axios';
 class App extends Component {
   
   componentDidMount(){
-    axios.get("http://142.93.38.157:5000/api/articles?kind=news")
+    axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news")
     .then(resp=>{
-      console.log(resp);
+      console.log(resp.data);
     })
     .catch(err=>{console.log(err)});
   }
