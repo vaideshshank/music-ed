@@ -6,6 +6,7 @@ import {Link,NavLink} from 'react-router-dom';
 class Header extends Component {
   
   render() {
+      {console.log(process.env.MUSICED_BACKEND)};
     return (
       <div>
         <header className={HeaderCss.container}>

@@ -12,12 +12,21 @@ import Signin from './components/Signin/Signin';
 import Projects from './components/Projects';
 import Resource from './components/Resource';
 import {BrowserRouter,Route} from 'react-router-dom';
+import axios from 'axios';
+// const dotenv=require('dotenv');
+// dotenv.config();
 
 
 
 class App extends Component {
   
-  
+  componentDidMount(){
+    axios.get("http://142.93.38.157:5000/api/articles?kind=news")
+    .then(resp=>{
+      console.log(resp);
+    })
+    .catch(err=>{console.log(err)});
+  }
   render() {
 
     return (
