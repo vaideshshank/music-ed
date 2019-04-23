@@ -67,42 +67,6 @@
     color:#ffc201;
     font-size:14px;
 }
-/*
-.imageCarousal{
-    width:100%;
-    display: flex;
-    margin: 0 auto;
-}
-
-.imageCarousal img{
-    height:250px;
-    width:400px;
-}
-
-.imageCarousal>div{
-    margin-left: 15px;
-    margin-right: 15px;
-    opacity: 0.4;
-}
-
-.imageCarousal>div:nth-child(2){
-    opacity: 1;
-}
-
-.imageCarousal>div:nth-child(2)>img{
-    height:275px;
-    width: 450px;
-}
-
-.imageCarousal span{
-    display: block;
-    font-family: Heebo-Medium;
-    
-}
-
-.imageCarousal span:nth-child(2){color:white;}
-.imageCarousal span:nth-child(3){color:#9b9b9b;font-size: 14px;}
-*/
 
 body{
     max-width: 100%;

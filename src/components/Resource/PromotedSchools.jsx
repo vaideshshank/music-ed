@@ -19,26 +19,14 @@ class Featured extends PureComponent{
             childPointers[pointer].style.fontSize="14px";
             childPointers[pointer].style.transition="font-size 0.2s ease-in";
             
-            var promotedSchool=document.querySelectorAll(".promotedSchool")[0];
-            var schoolContainer=promotedSchool.childNodes;
-            /*schoolContainer.forEach((cont,ind)=>{
-              cont.style.display="none"
-              if(ind===pointer){
-                console.log("changes");
-                cont.style.display="flex";
-              };
-              console.log(cont.style.display);
-            })*/
-            var slideBy=-(schoolContainer[0].clientWidth*pointer-100);
+            var promotedSchool=document.querySelectorAll(".promotedSchool")[0],
+                schoolContainer=promotedSchool.childNodes,
+                slideBy=-(schoolContainer[0].clientWidth*pointer-100);
             promotedSchool.style.transform=`translateX(${slideBy}px)`;
-            // schoolContainer[0].style.transform="translateX(-100px)";
             schoolContainer[pointer].style.opacity="1";
             promotedSchool.style.transition="transform 0.5s ease";
             schoolContainer[pointer].style.transition="opacity 0.5s ease";
-            
-            // console.log(schoolContainer[0].style.transform);
-            
-
+               
             if(pointer==0) pointer=5; 
             
             childPointers[pointer-1].style.color="#707070";
@@ -46,9 +34,6 @@ class Featured extends PureComponent{
             childPointers[pointer-1].style.transition="font-size 0.2s ease-in";
             schoolContainer[pointer-1].style.opacity=".2";
             schoolContainer[pointer-1].style.transition="opacity 0.5s ease";
-
-            
-          
           });
 
         
@@ -66,11 +51,22 @@ class Featured extends PureComponent{
             childPointers[pointer].style.fontSize="14px";
             childPointers[pointer].style.transition="font-size 0.2s ease-in";
             
+            var promotedSchool=document.querySelectorAll(".promotedSchool")[0],
+                schoolContainer=promotedSchool.childNodes,
+                slideBy=-(schoolContainer[0].clientWidth*pointer-100);
+                
+            promotedSchool.style.transform=`translateX(${slideBy}px)`;
+            schoolContainer[pointer].style.opacity="1";
+            promotedSchool.style.transition="transform 0.5s ease";
+            schoolContainer[pointer].style.transition="opacity 0.5s ease";
+            
             if(pointer==4) pointer=-1;
             childPointers[(pointer+1)%this.props.imageNo].style.color="#707070";
             childPointers[(pointer+1)%this.props.imageNo].style.fontSize="10px";
             childPointers[(pointer+1)%this.props.imageNo].style.transition="font-size 0.2s ease-in";
 
+            schoolContainer[pointer+1].style.opacity=".2";
+            schoolContainer[pointer+1].style.transition="opacity 0.5s ease";
 
         } 
       )

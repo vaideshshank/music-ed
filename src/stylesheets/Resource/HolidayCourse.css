@@ -21,10 +21,13 @@
     border:none;
     border-bottom: 2px solid rgba(128, 128, 128, 0.24);
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 .holidayCourse .holCourseImgs{
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 100px;
 }
 
 .holidayCourse .holCourseImgs>div{
@@ -36,6 +39,15 @@
     text-align: center;
     box-shadow: 0 5px 10px -6px gray;
     transition: box-shadow 0.2s ease-in-out;
+    transform:scale(.8);
+    opacity:0.4;
+    position:relative
+}
+
+.holidayCourse .holCourseImgs>div:nth-child(2){
+    transform:scale(1.5);
+    margin-left:50px;margin-right:60px;
+    opacity:1;
 }
 
 .holidayCourse .holCourseImgs>div:hover{
@@ -50,4 +62,23 @@
 .holidayCourse .holCourseImgs>div>div{
     padding-top:10px;
     padding-bottom: 10px; 
+    background: black;
+    color:white;
+}
+
+.holidayCourse .navs{
+    font-size:40px;
+    color:#707070;
+    margin-top:100px;
+    box-shadow: none;
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.holidayCourse .navs>i{
+    margin-right: 100px;margin-left: 100px;
+}
+
+.holidayCourse .navs>i:hover{
+    cursor:pointer;
 }
