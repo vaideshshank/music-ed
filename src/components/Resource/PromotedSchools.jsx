@@ -18,12 +18,40 @@ class Featured extends PureComponent{
             childPointers[pointer].style.color="#ffc201";
             childPointers[pointer].style.fontSize="14px";
             childPointers[pointer].style.transition="font-size 0.2s ease-in";
+            
+            var promotedSchool=document.querySelectorAll(".promotedSchool")[0];
+            var schoolContainer=promotedSchool.childNodes;
+            /*schoolContainer.forEach((cont,ind)=>{
+              cont.style.display="none"
+              if(ind===pointer){
+                console.log("changes");
+                cont.style.display="flex";
+              };
+              console.log(cont.style.display);
+            })*/
+            var slideBy=-(schoolContainer[0].clientWidth*pointer-100);
+            promotedSchool.style.transform=`translateX(${slideBy}px)`;
+            // schoolContainer[0].style.transform="translateX(-100px)";
+            schoolContainer[pointer].style.opacity="1";
+            promotedSchool.style.transition="transform 0.5s ease";
+            schoolContainer[pointer].style.transition="opacity 0.5s ease";
+            
+            // console.log(schoolContainer[0].style.transform);
+            
+
             if(pointer==0) pointer=5; 
             
             childPointers[pointer-1].style.color="#707070";
             childPointers[pointer-1].style.fontSize="10px";
             childPointers[pointer-1].style.transition="font-size 0.2s ease-in";
-          })
+            schoolContainer[pointer-1].style.opacity=".2";
+            schoolContainer[pointer-1].style.transition="opacity 0.5s ease";
+
+            
+          
+          });
+
+        
     }
 
     decrementPtr=()=>{
@@ -42,9 +70,13 @@ class Featured extends PureComponent{
             childPointers[(pointer+1)%this.props.imageNo].style.color="#707070";
             childPointers[(pointer+1)%this.props.imageNo].style.fontSize="10px";
             childPointers[(pointer+1)%this.props.imageNo].style.transition="font-size 0.2s ease-in";
+
+
         } 
       )
     }
+
+
     render(){
         var {imageNo}=this.props;
         var images=[...Array(Number(imageNo)).keys()];
@@ -53,11 +85,11 @@ class Featured extends PureComponent{
               <span>{this.props.heading}</span>
               <div class="promotedSchool">
                 {   
-                    [...Array(Number(/*this.props.imageNo*/1)).keys()].map(val=>{
+                    [...Array(Number(5)).keys()].map(val=>{
                         return (
                         <div className="schoolContainer" key={val}>
                         {
-                            this.props.data.slice(this.state.pointer*3,this.state.pointer*3+3).map((val,ind)=>{
+                            this.props.data.slice(0,3).map((val,ind)=>{
                                 return( 
                                     <div key={ind}>
                                         <img src={Placeholder}/>

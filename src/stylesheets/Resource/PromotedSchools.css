@@ -104,18 +104,33 @@
 .imageCarousal span:nth-child(3){color:#9b9b9b;font-size: 14px;}
 */
 
-.promotedSchool{
-    flex-wrap: nowrap;
-    overflow: hidden;
+body{
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
+.promotedSchool{
+    display: flex;
+    flex-wrap: nowrap; 
+    /* overflow: hidden; */
+    /* justify-content: center; */
+    transform: translateX(100px);
+    
+}
+
 
 .promotedSchool .schoolContainer{
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap; */
     justify-content: center;
     margin-bottom: 30px;
     /*display: inline-block;*/
+    opacity:0.2;
     
+}
+
+.promotedSchool .schoolContainer:nth-child(1){
+    opacity: 1;
 }
 
 .promotedSchool>.schoolContainer>div{
