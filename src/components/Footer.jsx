@@ -16,7 +16,9 @@ const Connect=()=>{
         <div>
             Connect with us <br/><hr/>
             <i className="fa fa-facebook-official" aria-hidden="true"></i>
+            <div className="mobileDisp">Facebook</div>
             <i className="fa fa-twitter-square" aria-hidden="true"></i>
+            <div className="mobileDisp">Twitter</div>
         </div>
     )
 }
@@ -34,9 +36,9 @@ const Links=()=>{
 const Options=()=>{
     return(
        <div>
-            Join us <br/>
+            Join us<br/>
             <hr/>
-            <span>SIGN IN</span>|
+            <span>SIGN IN</span><pre>|</pre>
             <span>REGISTER</span>
         </div>
     )

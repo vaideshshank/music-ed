@@ -91,3 +91,35 @@ img[alt="Placeholder"]{
     font-size: 30px;
 }
 
+
+@media screen and (max-width:700px){
+    body .parent>div:nth-child(1)>span:nth-child(1){
+        font-size: 4.5vw;
+        margin-bottom: 20px;
+        width:40%;
+    }
+
+    body .parent>div:nth-child(1)>span:nth-child(2){
+        font-size: 4vw;
+        width:27%;
+    }
+    body .slider1{
+        width:92%;
+        margin-left:0;
+    }
+    body img[alt="Placeholder"]{
+        width:40vw;
+        height:auto;
+    }
+    body .slider1 div>div>span:nth-child(1){
+        font-size:3vw;
+        width:40vw;
+    }
+
+    body .slider1 div>div>span:nth-child(2){
+        font-size:2.3vw;
+    }
+}
+
+
+

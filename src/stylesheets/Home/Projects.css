@@ -59,32 +59,32 @@
     width:90%;
     margin:0 auto;
     padding-left:32px;
-    background:rgba(159, 159, 159, 0.05);
     margin-top:70px;margin-bottom:70px;
 }
 
-.slider3 .singleProject{
+.singleProject{
     display:flex;
     flex-direction: row;
-    clear:both;
-    width:100%;
 }
-
-.slider3 .singleProject>img{
-    width:45%;
-    height:350px;
+.singleProject>div:nth-child(1){
     display: inline-block;
+    width:40%;
     float: left;
 }
 
-.slider3 .singleProject>div{
+.singleProject>div:nth-child(1)>img{
+    width: 100%;
+    height:350px;
+}
+
+.singleProject>div:nth-child(2){
+    display: inline-block;
     width:50%;
-    display:inline-block;
-    float:left;
     height:350px;
     margin-left:30px;
+    float: left;
 }
-.singleProject>div>span:nth-child(1){
+.singleProject>div:nth-child(2)>span:nth-child(1){
     display:block;
     font-family: 'Heebo-Light';
     color:#707070;
@@ -93,7 +93,7 @@
     margin-top:15px;
 }
 
-.singleProject>div>span:nth-child(2){
+.singleProject>div:nth-child(2)>span:nth-child(2){
     display: block;
     font-family: 'Heebo-Regular';
     color:#101010;
@@ -105,13 +105,13 @@
     text-transform: uppercase;
 }
 
-.singleProject>div>span:nth-child(3){
+.singleProject>div:nth-child(2)>span:nth-child(3){
     color:#101010;
     margin-top:20px;
     display: block;
 }
 
-.singleProject>div>button{
+.singleProject>div:nth-child(2)>button{
     padding-top:10px;
     padding-bottom:10px;
     padding-left: 50px;
@@ -138,4 +138,53 @@
     content: ">";
     color: black;
     font-size: 30px;
+}
+
+@media screen and (max-width:700px){
+    body .project{
+        margin:0;
+    }
+    body .project>div:nth-child(1)>span:nth-child(1){
+        font-size: 4.5vw;
+        margin-bottom: 20px;
+        width:40%;
+    }
+
+    body .project>div:nth-child(1)>span:nth-child(2){
+        font-size: 4vw;
+        width:21%;
+    }
+    body .slider3{
+        padding-left: 0;
+        margin-top:20px;
+    }
+    body .slider3 .singleProject>div:nth-child(2){
+        margin-left: 0;
+        height:auto;
+        margin-left: 5px;
+    }
+    body .slider3 .singleProject img{
+        height:auto;
+    }
+
+    body .slider3 .singleProject>div:nth-child(2)>span:nth-child(1){
+        font-size:5vw;
+        margin-top:5px;
+    }
+    body .slider3 .singleProject>div:nth-child(2)>span:nth-child(2){
+        font-size:2.5vw;
+        margin-bottom:5px;
+        margin-top:5px;
+    }
+    body .slider3 .singleProject>div:nth-child(2)>span:nth-child(3){
+        font-size:2.1vw;
+        margin-top:5px
+    }
+    body .slider3 .singleProject>div:nth-child(2)>button{
+        font-size:2.5vw;
+        padding:5px;
+        padding-left:15px;padding-right:15px;
+        margin-top:10px;
+        
+    }
 }

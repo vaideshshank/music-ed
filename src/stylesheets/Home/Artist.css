@@ -20,6 +20,7 @@
     justify-items: space-around;
     margin-top:70px;
     position: relative;
+    overflow: hidden;
 }
 
 .flex1>div:nth-child(1){
@@ -64,9 +65,9 @@
 .flex1>div:nth-child(1)>div:hover{cursor: pointer;}
 .flex1>img{
     width:56.213%;
-    min-height:100%;
     margin-left:50px;
     display:block;
+    min-height: 100%;
     position: absolute;
     right:0;
 }
@@ -103,7 +104,7 @@
     }
 
     body .flex1>img{
-        width:50%;
+        width:47%;
     }
 
 

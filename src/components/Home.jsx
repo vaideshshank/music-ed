@@ -13,6 +13,7 @@ class Home extends Component{
                 infinite: true,
                 speed: 500,
                 slidesToShow: 4,
+                arrows:true,
                 slidesToScroll: 4,
                 responsive: [
                     {
@@ -30,25 +31,41 @@ class Home extends Component{
                         slidesToShow: 2,
                         slidesToScroll: 2
                     }
-                    },
-                    {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
                     }
-                    }
+                    
                 ]
                 }
         }
     
     }
 
+    componentDidMount(){
+        if(window.innerWidth<=700){
+            this.setState({
+                settings:{
+                    ...this.state.settings,    
+                    arrows:false
+                }
+            })
+        }
+
+        window.addEventListener('resize',()=>{
+            if(window.innerWidth<=700){
+                this.setState({
+                    settings:{
+                        ...this.state.settings,    
+                        arrows:false
+                    }
+                })
+            }
+        })
+    }
+
     render(){
         return(
             <React.Fragment>
                 <LatestNews settings={this.state.settings}/>
-                <Artist/>
+                 <Artist/>
                 <Magazine settings={this.state.settings}/>
                 <Projects/>
             </React.Fragment>

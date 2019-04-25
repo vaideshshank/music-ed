@@ -103,3 +103,38 @@
     color: black;
     font-size: 30px;
 }
+
+@media screen and (max-width:700px){
+    body .magazineParent>div:nth-child(1)>span:nth-child(1){
+        font-size: 4.5vw;
+        margin-bottom: 20px;
+        width:auto;
+    }
+
+    body .magazineParent>div:nth-child(1)>span:nth-child(2){
+        font-size: 4vw;
+        width:27%;
+    }
+
+    body .slider2{
+        width:92%;
+        margin-left:0;
+    }
+    body .magazineParent img[alt="Placeholder"]{
+        width:40vw;
+        height:auto;
+    }
+    body .slider2 div>div>span:nth-child(1){
+        font-size:3vw;
+        width:40vw;
+        margin-top:5px;
+        line-height:15px;
+    }
+
+    body .slider2 div>div>span:nth-child(2){
+        font-size:2.3vw;
+        width:40vw;
+        line-height:12px;
+    }
+
+}

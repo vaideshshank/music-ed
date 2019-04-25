@@ -6,7 +6,6 @@
 footer{
     display: flex;
     background: black;
-    height:118px;
     color:white;
     font-family: Poppins-Regular;
     max-width:100%;
@@ -20,9 +19,13 @@ footer>div:nth-child(1)>hr{width:150px;margin-left: 0}
 footer>div:nth-child(3){text-align: right;padding-right:10vw;width:25vw;}
 footer>div:nth-child(3)>hr{width:150px;margin-right: 0}
 
-i{
+footer>div:nth-child(1) i{
     font-size:20px;
     margin-right:30px;
+}
+
+footer  .mobileDisp{
+    display: none;
 }
 
 .flex2{
@@ -40,4 +43,39 @@ i{
 footer>div:nth-child(3)>span{
     margin-right:10px;
     margin-left:10px;
+}
+
+@media screen and (max-width:700px){
+    body footer>div:nth-child(3)>hr,body footer>div:nth-child(1)>hr{
+        display:none;
+    }
+    body footer>div:nth-child(1)>.mobileDisp{
+        display:block;
+        border: 2px solid red;
+    }
+
+    body footer>div:nth-child(1) i{display: none;}
+    body footer{
+        font-size:3vw;
+        justify-content: space-around;
+        margin-top:20px;
+        padding-top: 20px;padding-bottom: 20px;
+    }
+    body footer .flex2{
+        flex-direction: column;
+    }
+
+    body footer>div{
+        line-height: 4vh;
+        margin:0;
+    }
+    body footer>div:nth-child(1){padding-left:0vw}
+    body footer>div:nth-child(3){padding-right:5vw}
+    body footer>div:nth-child(3)>span{
+        display: block;
+        margin-right:0;
+    }
+    body footer>div:nth-child(3)>pre{display: none;}
+    
+   
 }
