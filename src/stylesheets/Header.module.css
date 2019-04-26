@@ -96,10 +96,12 @@
         font-size:5vw;
         color:white;
         margin:4vw;
-        border:2px solid green;
+        /* border:2px solid green; */
     }
+
+    
     .container2 .flex1{
-        border:2px solid red;
+        /* border:2px solid red; */
         width:40vw;
         top:2px;
         margin:0 auto;

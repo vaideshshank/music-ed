@@ -48,9 +48,9 @@ class Events extends Component {
     return (
       <React.Fragment>
         <TopEvents settings={this.state.settings}/>
-        <Featured heading="featured events" imageNo='5'/>
+        {/* <Featured heading="featured events" imageNo='5'/>
         <MultipleEvents/>
-        <Extended tabs={['events by region','events by calender']} data={extended}/>
+        <Extended tabs={['events by region','events by calender']} data={extended}/> */}
       </React.Fragment>
     )
   }
