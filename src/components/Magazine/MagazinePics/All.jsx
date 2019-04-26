@@ -1,6 +1,8 @@
 import React from 'react';
 import Placeholder from '../../../assets/images/Placeholder.png';
 import '../../../stylesheets/Magazine/All.css';
+import Loader from 'react-loader-spinner';
+
 
 
 const All=(props)=>{
@@ -16,6 +18,8 @@ const All=(props)=>{
     };
 
     return(
+        <>
+        <MusicLoader data={props.data}/>
         <div class="allMagazine">
             {
                 props.data.map((val,ind)=>{
@@ -32,7 +36,22 @@ const All=(props)=>{
                 })
             }
         </div>
+        </>
     )
 }
 
+
+const MusicLoader=(props)=>{
+    if(props.data.length==0){
+        return <div className="loader">
+        <Loader 
+           type="Audio"
+           color="#e2bc15"
+           height="100"	
+           width="100"
+        />   
+        </div>
+    }
+    return <></>
+}
 export default All

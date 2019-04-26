@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import '../../stylesheets/Jobs/Listings.css'
 
 //material components
-import Input from '@material-ui/core/Input';
-import Checkbox from '@material-ui/core/Checkbox';
+// import Input from '@material-ui/core/Input';
+// import Checkbox from '@material-ui/core/Checkbox';
+import Loader from 'react-loader-spinner';
 
 
 class Listings extends Component {
@@ -35,6 +36,7 @@ class Listings extends Component {
     }
 
   render() {
+    
     return (
       <div className="listingsFilter">
         <div className="heading">{this.props.heading}</div>
@@ -116,9 +118,14 @@ class Listings extends Component {
                     <button>Search</button>
                     </div>
                     <div className="jobs">
+                        <MusicLoader data={this.props.data}/>
+                                    
                         {
+
                             this.props.data.map((val,ind)=>{
+
                                 return(
+                                    
                                     <div>
                                         <div>
                                         <span>{val.title}</span>
@@ -143,6 +150,7 @@ class Listings extends Component {
                                         </span>
                                         <hr/>
                                     </div>
+                                
                                 )
                             })
                         }
@@ -154,6 +162,20 @@ class Listings extends Component {
       </div>
     )
   }
+}
+
+const MusicLoader=(props)=>{
+    if(props.data.length==0){
+        return <div className="loader">
+        <Loader 
+           type="Audio"
+           color="#e2bc15"
+           height="100"	
+           width="100"
+        />   
+        </div>
+    }
+    return <></>
 }
 
 export default Listings

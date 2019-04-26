@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Placeholder from '../../../assets/images/Placeholder.png';
 import '../../../stylesheets/News/All.css';
 import axios from 'axios';
-
+import Loader from 'react-loader-spinner';
 
 class All extends Component {
     state={
@@ -42,11 +42,10 @@ class All extends Component {
     }
   
     render() {
-        console.log(this.state.data);
+        //console.log(this.state.data);
         var displayAll=this.state.data.map((value,index)=>{
             console.log(this.state.index);
             return(
-            <>
             <div key={index} className="singleItem2">
                 <img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/>
                 <div>
@@ -54,9 +53,22 @@ class All extends Component {
                     <span><i className="fa fa-calendar" aria-hidden="true"></i> {value.created_on}</span>
                 </div>
             </div>
-             
-            </>)
+            )
         });
+
+        if(this.state.data.length==0){
+            return(
+                <div className="loader">
+                <Loader 
+                   type="Audio"
+                   color="#e2bc15"
+                   height="100"	
+                   width="100"
+                />   
+                </div>
+               );
+        }
+
     return (
       <div className="alldisplay2">
         <div>{displayAll}</div> 

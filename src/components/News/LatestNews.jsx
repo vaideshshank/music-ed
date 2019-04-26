@@ -1,7 +1,8 @@
 import React, { Component,PureComponent } from 'react'
 import Placeholder from '../../assets/images/Placeholder.png';
 import Slider from 'react-slick';
-import axios from 'axios';  
+import axios from 'axios';
+import Loader from 'react-loader-spinner';
 import '../../stylesheets/News/LatestNews.css';
 
 
@@ -39,7 +40,7 @@ export default class LatestNews extends PureComponent {
         
     // }
 
-    componentWillMount(){
+    componentDidMount(){
         axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news")
         .then(({data})=>{
             //console.log(data.data);
@@ -72,9 +73,22 @@ export default class LatestNews extends PureComponent {
             </div>
         )
     })
-    console.log(loadImage);
+//    console.log(loadImage);
+    if(this.state.imageContent.length==0){
+        return(
+            <div className="loader">
+            <Loader 
+               type="Audio"
+               color="#e2bc15"
+               height="100"	
+               width="100"
+            />   
+            </div>
+           );
+    }
+
     return (
-      <div class="latNews">
+      <div className="latNews">
         <span>latest news</span>
         <Slider className="slider4">
             {loadImage}   

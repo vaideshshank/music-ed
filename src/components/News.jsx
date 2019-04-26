@@ -45,8 +45,8 @@ export class News extends Component {
   render() {
     return (
       <React.Fragment>
-      {/* <LatestNews settings={this.state.settings}/> */}
-      {/* <FeaturedNews heading="featured news" imageNo="5" data={featured}/> */}
+      <LatestNews settings={this.state.settings}/> 
+      <FeaturedNews heading="featured news" imageNo="5" data={featured}/>
       <MoreNews/>
       </React.Fragment>
     )

@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import '../../stylesheets/Events/MultipleEvents.css';
 import All from './MagazinePics/All';
 import axios from 'axios';
+
 var {all}=require('../../data/magazine.json');
 
 

@@ -16,11 +16,20 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.loader{
+    width:120px;
+    margin:0 auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
 .latNews{
     margin:0 auto;
     width:86%;
     margin-top:60px;
+    margin-bottom: 50px;
 }
+
 
 .latNews span{display: block;}
 
