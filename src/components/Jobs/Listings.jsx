@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import '../../stylesheets/Jobs/Listings.css'
+import Loader from 'react-loader-spinner';
 
 //material components
 // import Input from '@material-ui/core/Input';
 // import Checkbox from '@material-ui/core/Checkbox';
-import Loader from 'react-loader-spinner';
 
 
 class Listings extends Component {

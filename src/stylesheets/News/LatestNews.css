@@ -46,7 +46,8 @@
 .slider4{display:flex;}
 
 .content1>span:nth-child(1){
-    background-image: url(http://142.93.38.157:5000/static/img/default.jpg);
+    background: url(http://142.93.38.157:5000/static/img/default.jpg),rgba(0, 0, 0, 0.411);
+    background-blend-mode: multiply;
     padding-top:350px;
     background-size:cover;
     padding-left:30px;
