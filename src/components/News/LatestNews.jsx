@@ -90,7 +90,7 @@ export default class LatestNews extends PureComponent {
     return (
       <div className="latNews">
         <span>latest news</span>
-        <Slider className="slider4">
+        <Slider {...this.props.settings} className="slider4">
             {loadImage}   
         </Slider>
       </div>

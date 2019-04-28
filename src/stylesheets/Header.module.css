@@ -116,11 +116,11 @@
     }
     .container2>div:nth-child(2){display: none;}
     .container2>div:nth-child(2)>div{
-        background-color:rgba(0, 0, 0, 0.301);
+        background-color:rgba(0, 0, 0, 0.795);
         text-transform:uppercase;
-        padding:5px;
+        padding:8px;
+        border-bottom: 1px solid #9c7700
     }
-    .container2>div:nth-child(2)>div a{text-decoration: none;color:white;}
+    .container2>div:nth-child(2)>div a{text-decoration: none;color:#ffc201;}
 
-    
 }

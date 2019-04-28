@@ -93,3 +93,19 @@
     color:#101010;
     font-weight: bold;  
 }
+
+@media screen and (max-width:800px){
+    body .content1>span:nth-child(1){
+        width:90%;
+        padding-top:50%;
+    }
+
+    body .content1>span:nth-child(2){
+        width:90%;
+    }
+
+    body .content1>span:nth-child(2){
+        font-size:5vw;
+        margin-left: 0;
+    }
+}

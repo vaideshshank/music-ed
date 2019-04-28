@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LatestNews from './News/LatestNews'; 
 import FeaturedNews from './News/FeaturedNews';
 import MoreNews from './News/MoreNews';
+import Loader from 'react-loader-spinner';
 var {featured} =require('./../data/news.json');
 
 export class News extends Component {
@@ -25,14 +26,7 @@ export class News extends Component {
               }
               },
               {
-              breakpoint: 600,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-              }
-              },
-              {
-              breakpoint: 480,
+              breakpoint: 700,
               settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1
@@ -42,6 +36,29 @@ export class News extends Component {
           }
     }
   }
+
+  componentDidMount(){
+    if(window.innerWidth<=700){
+          this.setState({
+              settings:{
+                  ...this.state.settings,    
+                  arrows:false
+              }
+          })
+      }
+
+      window.addEventListener('resize',()=>{
+          if(window.innerWidth<=700){
+              this.setState({
+                  settings:{
+                      ...this.state.settings,    
+                      arrows:false
+                  }
+              })
+          }
+      })
+}
+
   render() {
     return (
       <React.Fragment>

@@ -31,7 +31,7 @@ class Header extends Component {
         <header className={HeaderCss.container}>
             <LogoPart logo={logo}/>
             <Options/>
-            <Navbar/>
+            <Navbar menu={this.showMenu}/>
         </header>
         <header className={HeaderCss.container2}>
             <div>
@@ -79,10 +79,10 @@ export const Options=()=>{
     )
 }
 
-const Navbar=()=>{
+const Navbar=(props)=>{
     
     const nav=['news','channels','events','jobs','projects','local','directory','resource','magazine'];
-    const navOptions=nav.map((opt,ind)=><span key={ind}><Link to={opt}>{opt}</Link></span>)
+    const navOptions=nav.map((opt,ind)=><span key={ind} onClick={props.menu}><Link to={opt}>{opt}</Link></span>)
     return(
         <div className={HeaderCss.flex2}>
             {navOptions}

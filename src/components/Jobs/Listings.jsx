@@ -126,20 +126,17 @@ class Listings extends Component {
 
                                 return(
                                     
-                                    <div>
+                                    <div key={ind}>
                                         <div>
                                         <span>{val.title}</span>
                                         <span>
-                                            {/* {val.jobType.map((value,index)=>{
-                                                return <span key={index}>{value}</span>
-                                            })} */}
                                             <span>{val.title}</span>
                                         </span>
                                         <span>{val.id} $/hr</span>
                                         </div>
                                         <div>
-                                        <span><i class="fa fa-building" aria-hidden="true"></i> {val.company_name}</span>
-                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i> {/*val.place*/}London</span>
+                                        <span><i className="fa fa-building" aria-hidden="true"></i> {val.company_name}</span>
+                                        <span><i className="fa fa-map-marker" aria-hidden="true"></i> {/*val.place*/}London</span>
                                         <span>{val.created_on}</span>
                                         </div>
                                         <span>{val.description}</span>

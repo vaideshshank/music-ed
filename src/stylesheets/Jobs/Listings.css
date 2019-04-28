@@ -224,3 +224,24 @@
     border-bottom: 2px solid rgba(155, 155, 155, 0.2);
     margin-bottom:35px;
 }
+
+@media screen and (max-width:800px){
+    body .listingsFilter{margin-left: 2%;}
+    body .listingsFilter .contentBox{
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+    body .contentBox>div:nth-child(1){
+        padding-left: 0;
+    }
+    body .contentBox .listings{margin-left: 0;}
+    body .contentBox .listings>div:nth-child(1) input[type='text']{min-width: 0;}
+    .contentBox .listings>div:nth-child(1) button{
+        display: block;
+        margin-top:10px;
+    }
+
+    body .listingsFilter .heading{font-size:6vw;}
+    body .contentBox>div:nth-child(1)>span{font-size: 5vw;}
+}
