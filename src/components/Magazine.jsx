@@ -15,6 +15,7 @@ class Magazine extends Component{
                   speed: 500,
                   slidesToShow: 4,
                   slidesToScroll: 4,
+                  arrows:true,
                   responsive: [
                       {
                       breakpoint: 1024,
@@ -26,19 +27,12 @@ class Magazine extends Component{
                       }
                       },
                       {
-                      breakpoint: 600,
-                      settings: {
-                          slidesToShow: 2,
-                          slidesToScroll: 2
-                      }
-                      },
-                      {
-                      breakpoint: 480,
+                      breakpoint: 800,
                       settings: {
                           slidesToShow: 1,
                           slidesToScroll: 1
                       }
-                      }
+                      }  
                   ]
                  
           },
@@ -48,7 +42,28 @@ class Magazine extends Component{
         }
       }
 
-      componentWillMount(){
+
+      componentWillMount=()=>{
+        if(window.innerWidth<=800){
+            this.setState({
+                ...this.state,
+                settings:{
+                    ...this.state.settings,    
+                    arrows:false
+                }
+            })
+        }
+
+        window.addEventListener('resize',()=>{
+            if(window.innerWidth<=800){
+                this.setState({
+                    settings:{
+                        ...this.state.settings,    
+                        arrows:false
+                    }
+                })
+            }
+        })
         axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news")
         .then(({data})=>{
             //console.log(data.data);
@@ -60,7 +75,7 @@ class Magazine extends Component{
             })
         })
 
-    }
+        }
       
   
         render(){

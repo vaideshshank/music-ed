@@ -18,6 +18,7 @@
 .locations{
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .locations img{
@@ -33,4 +34,9 @@
     top:-30px;
     color:white;
     margin-left: 5px;
+}
+
+@media screen and (max-width:800px){
+    body .heading{font-size:6.5vw;}   
+    body .locations img{width:40vw;height:35vw;}
 }

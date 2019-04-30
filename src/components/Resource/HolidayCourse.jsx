@@ -89,7 +89,7 @@ const HolidayCourse=props=>{
             }
             
             </div>
-            <div class="navs">
+            <div className="navs">
                 <i className="fa fa-chevron-left increment" aria-hidden="true" onClick={shiftBackward}></i>
                 <i className="fa fa-chevron-right increment" aria-hidden="true" onClick={shiftForward}></i>
             </div>

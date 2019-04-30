@@ -34,3 +34,12 @@
     color:white;
     font-size:14px;
 }
+
+@media screen and (max-width:800px){
+    body .slider7 img{
+        width:40vw;
+        height:30vw;
+    }
+    body .slider7 div>span{width:37vw;left:4vw;}
+    body .slider7 .singleImg{height:auto;}
+}

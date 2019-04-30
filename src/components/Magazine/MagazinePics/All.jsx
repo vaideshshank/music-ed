@@ -20,14 +20,14 @@ const All=(props)=>{
     return(
         <>
         <MusicLoader data={props.data}/>
-        <div class="allMagazine">
+        <div className="allMagazine">
             {
                 props.data.map((val,ind)=>{
                     return(
                         <div key={ind}>
                             <div>
                                 <img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/>
-                                <i class="fa fa-bookmark-o" aria-hidden="true" onClick={select}></i>
+                                <i className="fa fa-bookmark-o" aria-hidden="true" onClick={select}></i>
                             </div>
                             <span>{val.title}</span>
                             <span>{val.created_on}</span>

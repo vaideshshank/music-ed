@@ -6,13 +6,13 @@ import '../../stylesheets/Articles/Articles.css';
 const Magazine=(props)=>{
 
     return(
-        <div class="articlesSection">
+        <div className="articlesSection">
             <span>Latest Articles</span>
-            <Slider className="slider6">
-                {
+            <Slider className="slider6" {...props.settings}>
+                {   
                     props.data.map((val,ind)=>{
                         return(
-                            <div key={ind} class="singleCard">
+                            <div key={ind} className="singleCard">
                                 <span>
                                     <span>{val.title}</span>
                                     <span>{val.created_on}</span>

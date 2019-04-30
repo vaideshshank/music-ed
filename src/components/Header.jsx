@@ -10,12 +10,14 @@ class Header extends Component {
     var menu=e.target;
     if(menu.className=="fa fa-bars"){
         menu.className="fa fa-close";
-        menu.style.transform="rotate(+180deg)";    
+        menu.style.transform="rotate(+180deg)";
+        menu.style.fontSize="8vw";    
     }else if(menu.className=="fa fa-close"){
         menu.style.transform="rotate(-180deg)";
-        menu.className="fa fa-bars";  
+        menu.className="fa fa-bars";
+        menu.style.fontSize="5vw";  
     }
-    menu.style.transition="transform 0.2s ease-in-out"
+    menu.style.transition="transform 0.2s ease-in-out, font-size 0.2s ease-in-out";;
     
     if(menuStyle.display=="block"){
         menuStyle.display="none";

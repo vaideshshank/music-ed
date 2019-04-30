@@ -5,7 +5,7 @@ import '../../stylesheets/Resource/PromotedSchools.css';
 class Featured extends PureComponent{
     constructor(props) {
       super(props);
-      this.state={pointer:0};
+      this.state={pointer:0,imageLimit:3,imageNo:5,shiftBy:100};
     }
 
 
@@ -21,7 +21,7 @@ class Featured extends PureComponent{
             
             var promotedSchool=document.querySelectorAll(".promotedSchool")[0],
                 schoolContainer=promotedSchool.childNodes,
-                slideBy=-(schoolContainer[0].clientWidth*pointer-100);
+                slideBy=-(schoolContainer[0].clientWidth*pointer-this.state.shiftBy);
             promotedSchool.style.transform=`translateX(${slideBy}px)`;
             schoolContainer[pointer].style.opacity="1";
             promotedSchool.style.transition="transform 0.5s ease";
@@ -53,7 +53,7 @@ class Featured extends PureComponent{
             
             var promotedSchool=document.querySelectorAll(".promotedSchool")[0],
                 schoolContainer=promotedSchool.childNodes,
-                slideBy=-(schoolContainer[0].clientWidth*pointer-100);
+                slideBy=-(schoolContainer[0].clientWidth*pointer-this.state.shiftBy);
                 
             promotedSchool.style.transform=`translateX(${slideBy}px)`;
             schoolContainer[pointer].style.opacity="1";
@@ -72,6 +72,20 @@ class Featured extends PureComponent{
       )
     }
 
+    componentWillMount(){
+      var limit,imgLimit,shift;
+      console.log(this.props.data.length);
+      if(window.innerWidth<800){limit=1;imgLimit=this.props.data.length/limit-1;shift=65;}
+      else {limit=3;imgLimit=5;shift=100;}
+  
+      this.setState({
+        ...this.state,
+        imageLimit:limit,
+        imageNo:imgLimit,
+        shiftBy:shift
+      })
+    }
+
 
     render(){
         var {imageNo}=this.props;
@@ -79,13 +93,13 @@ class Featured extends PureComponent{
         return(
             <div className="featured">
               <span>{this.props.heading}</span>
-              <div class="promotedSchool">
+              <div className="promotedSchool">
                 {   
                     [...Array(Number(5)).keys()].map(val=>{
                         return (
                         <div className="schoolContainer" key={val}>
                         {
-                            this.props.data.slice(0,3).map((val,ind)=>{
+                            this.props.data.slice(0,this.state.imageLimit).map((val,ind)=>{
                                 return( 
                                     <div key={ind}>
                                         <img src={Placeholder}/>
@@ -103,7 +117,7 @@ class Featured extends PureComponent{
                 <span><i className="fa fa-chevron-left decrement" aria-hidden="true" onClick={this.decrementPtr}></i></span>
                 <span className="pointers">
                   {
-                    [...Array(Number(this.props.imageNo)).keys()].map((val)=>{
+                    [...Array(Number(this.state.imageNo)).keys()].map((val)=>{
                       return <i className="fa fa-circle" aria-hidden="true" key={val}></i>
                     })
                   }

@@ -9,11 +9,11 @@ const Locations=(props)=>{
             <div className="heading">Browse by Location</div>
             <div className="locations">
             {
-                [...Array(Number(props.imageNo)).keys()].map((val)=>{
+                [...Array(Number(props.imageNo)).keys()].map((val,ind)=>{
                     return (
-                        <div>
-                        <img src={Placeholder} key={val} />
-                        <span>Country</span>
+                        <div key={ind}>
+                            <img src={Placeholder} key={val} />
+                            <span>Country</span>
                         </div>
                 )
             })

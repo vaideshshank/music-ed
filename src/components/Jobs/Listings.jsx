@@ -124,8 +124,7 @@ class Listings extends Component {
 
                             this.props.data.map((val,ind)=>{
 
-                                return(
-                                    
+                                return(                                  
                                     <div key={ind}>
                                         <div>
                                         <span>{val.title}</span>
@@ -147,7 +146,6 @@ class Listings extends Component {
                                         </span>
                                         <hr/>
                                     </div>
-                                
                                 )
                             })
                         }

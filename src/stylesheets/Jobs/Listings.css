@@ -246,6 +246,7 @@
     body .contentBox>div:nth-child(1)>span{font-size: 5vw;margin-top:5px;}
     body .contentBox>div:nth-child(1)>div>span:nth-child(1){font-size:5vw;}
     body .availability label{font-size:5vw;}
+    body .contentBox .listings .jobs{margin:auto;}
     body .contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(1){font-size:6vw;max-width:22vw;}
     body .contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(2)>span{font-size:3.5vw;}
     body .contentBox .listings .jobs>div>div:nth-child(1)>span:nth-child(3){font-size:4.5vw;}

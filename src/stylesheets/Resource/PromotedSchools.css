@@ -68,18 +68,20 @@
     font-size:14px;
 }
 
+
+/*crucial property for hiding overflow inside body*/
 body{
     max-width: 100%;
     overflow-x: hidden;
 }
+
 
 .promotedSchool{
     display: flex;
     flex-wrap: nowrap; 
     /* overflow: hidden; */
     /* justify-content: center; */
-    transform: translateX(100px);
-    
+    transform: translateX(100px);  
 }
 
 
@@ -128,4 +130,15 @@ body{
     color:black;
     font-size:18px;
     font-family: Heebo-Medium;
+}
+
+@media screen and (max-width:800px){
+    body .promotedSchool{transform: translateX(65px);}
+    body .promotedSchool>.schoolContainer>div{width:70vw;}
+    body .promotedSchool>.schoolContainer>div>img{width:70vw;height:45vw;}
+    body .promotedSchool>.schoolContainer>div>div:nth-child(2){font-size:4.5vw;}
+    body .promotedSchool>.schoolContainer>div>div:nth-child(3){font-size:3.8vw;}
+    html{overflow-x:hidden;}
+    
+      
 }

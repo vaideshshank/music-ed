@@ -29,7 +29,6 @@
 .card{display:flex;}
 .card i{margin:0;}
 
-
 .card>img{
     width:70px;
     height:52px;
@@ -65,4 +64,13 @@
 .card>div>div:nth-child(2)>span:nth-child(3)>i{
     margin-left:3px;
     cursor: pointer;;
+}
+
+
+@media screen and (max-width:800px){
+    body .card>div>div:nth-child(1)>span:nth-child(1){font-size:4.5vw;width:45vw;}
+    body .card>div>div:nth-child(2)>span:nth-child(1),.card>div>div:nth-child(2)>span:nth-child(2){
+        display:block;
+        font-size:3.5vw;
+    }
 }

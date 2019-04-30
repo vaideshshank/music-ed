@@ -5,12 +5,12 @@ class Location extends Component{
     render(){
         var categories=this.props.data.map((val,ind)=>{
             return(
-                <div class="singleCategory">
+                <div className="singleCategory" key={ind}>
                     <div>{val.title}</div>
                     <div>
                         {
                             val.section.map((value,index)=>{
-                                return(<div>
+                                return(<div key={index}>
                                     <span>{value.part}</span>
                                     <span>{value.page}</span></div>
                                 )
@@ -21,7 +21,7 @@ class Location extends Component{
             )
         })
         return(
-            <div class="category">
+            <div className="category">
                 <span>Browse by Category</span>
                 <div>
                     {categories}

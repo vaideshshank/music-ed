@@ -57,3 +57,11 @@
 .searchBar button:hover{
     background-color: #0576bdc7;
 }
+
+@media screen and (max-width:800px){
+    .searchBar input[type='text']{
+        width: 80vw;
+        min-width: 0;
+    }
+    .searchBar button{margin-top:4vh;}
+}

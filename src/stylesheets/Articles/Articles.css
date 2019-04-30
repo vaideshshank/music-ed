@@ -46,9 +46,10 @@
     border-radius: 50%;
     display: block;
 }
-
+.slider6 .singleCard>span{display:block;}
 .slider6 .singleCard{
     display: flex;
+    flex-direction: row;
 }
 
 .slider6 .singleCard>span:nth-child(1){
@@ -92,4 +93,12 @@
 
 .slider6 .singleCard>span:nth-child(2){
     float:right;
+}
+
+@media screen and (max-width:800px){
+    body .articlesSection>span{font-size:6vw;}
+    body .slider6>div img{height:60vw;width:60vw;}
+    body .slider6 .singleCard>span:nth-child(1){margin:2vw;width:95%;display:block;}
+    body .slider6 .singleCard>span:nth-child(2){float:none;display:block;width:60vw;margin:0 auto;}
+    body .slider6 .singleCard{flex-direction:column-reverse;margin-top:5vh;}
 }
