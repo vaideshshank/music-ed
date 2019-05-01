@@ -26,6 +26,7 @@ class Header extends Component {
         menuStyle.display="block";
     }
   }
+  
 
   render() {
       return (
@@ -84,7 +85,7 @@ export const Options=()=>{
 const Navbar=(props)=>{
     
     const nav=['news','channels','events','jobs','projects','local','directory','resource','magazine'];
-    const navOptions=nav.map((opt,ind)=><span key={ind} onClick={props.menu}><Link to={opt}>{opt}</Link></span>)
+    const navOptions=nav.map((opt,ind)=><span key={ind} onClick={props.menu}><Link to={opt} onClick={props.menu}>{opt}</Link></span>)
     return(
         <div className={HeaderCss.flex2}>
             {navOptions}

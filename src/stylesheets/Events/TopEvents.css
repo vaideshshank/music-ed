@@ -98,7 +98,6 @@
         font-size:5.5vw;
     }
     body .tEvents{width:95%}
-    /* body .slider5 .singleEve{border:2px solid green;} */
     body .slider5 .singleEve>div{float:none}
     body .slider5 .singleEve>img{float:none;width:95%;height:70vw;display:block;    margin:0 auto;}
     body .slider5 .singleEve>div{margin:0}
