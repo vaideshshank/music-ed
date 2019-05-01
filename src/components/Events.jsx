@@ -22,19 +22,10 @@ class Events extends Component {
               settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3,
-                  infinite: true,
-                  dots: true
               }
               },
               {
-              breakpoint: 600,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-              }
-              },
-              {
-              breakpoint: 480,
+              breakpoint: 800,
               settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1
@@ -44,6 +35,29 @@ class Events extends Component {
           }
     }
   }
+
+  componentWillMount=()=>{
+    if(window.innerWidth<=800){
+        this.setState({
+            ...this.state,
+            settings:{
+                ...this.state.settings,    
+                arrows:false,
+                dots:true
+            }
+        })
+    }else{
+      this.setState({
+        ...this.state,
+        settings:{
+            ...this.state.settings,    
+            arrows:true,
+            dots:false
+        }
+    })
+    }
+  }
+
   render() {
     return (
       <React.Fragment>

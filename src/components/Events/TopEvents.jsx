@@ -31,7 +31,7 @@ class TopEvents extends Component {
     return (
       <div className="tEvents">
         <span>top Events</span>
-        <Slider className="slider5">
+        <Slider className="slider5" {...this.props.settings}>
             {filler}
         </Slider>
       </div>
