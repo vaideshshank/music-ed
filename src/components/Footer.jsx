@@ -16,9 +16,9 @@ const Connect=()=>{
         <div>
             Connect with us <br/><hr/>
             <i className="fa fa-facebook-official" aria-hidden="true"></i>
-            <div className="mobileDisp">Facebook</div>
+            <div className={FooterCss.mobileDisp}>Facebook</div>
             <i className="fa fa-twitter-square" aria-hidden="true"></i>
-            <div className="mobileDisp">Twitter</div>
+            <div className={FooterCss.mobileDisp}>Twitter</div>
         </div>
     )
 }

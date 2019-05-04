@@ -6,39 +6,55 @@ import Loader from 'react-loader-spinner';
 
 class All extends Component {
     state={
-        index:0,
+        index:1,
         data:[]
     }
 
-    selectedPage=(e)=>{
-        e.preventDefault();
-        e.target.style.backgroundColor='#ffc201';
-        e.target.style.borderColor='#ffc201';
-        var num=Number(e.target.innerHTML);
-        this.setState((prevState)=>({
-            index:(num-1)*4
-        }),()=>{
-            console.log("State updated to "+this.state.index);
-        });
-
+    paginate=()=>{
+        var pageIndex=document.getElementsByClassName("pageindex2");
+        for(var i=0;i<pageIndex.length; i++){
+            pageIndex[i].style.backgroundColor="#FFFFFF";
+            pageIndex[i].style.borderColor="#9b9b9b";
+        }
+        
+        pageIndex[this.state.index-1].style.backgroundColor='#ffc201';
+        pageIndex[this.state.index-1].style.borderColor='#ffc201';
     }
-    
-    pagination=[...Array(Math.ceil(this.props.data.length)).keys()].map((val,ind)=>{
-        return <div className="pageindex2" key={ind} onClick={this.selectedPage}>{ind+1}</div>
-    })
 
-    componentWillMount(){
-        axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news&page=1")
+    getNews=()=>{
+        axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news&page="+this.state.index)
         .then(({data})=>{
             //console.log(data.data);
             this.setState(prevState=>({
                 ...this.state,
                 data:[...data.data]
             }),()=>{
-                console.log(this.state.imageContent);
+                this.paginate();
             })
         })
+    }
 
+    selectedPage=(e)=>{
+        e.preventDefault();
+        var num=Number(e.target.innerHTML);
+        this.setState((prevState)=>({
+            index:num
+        }),async ()=>{
+            this.setState({
+                ...this.state,
+                data:[]
+            })
+            this.getNews();
+        });
+    }
+    
+    pagination=[...Array(2).keys()].map((val,ind)=>{
+        return <div className="pageindex2" key={ind} onClick={this.selectedPage}>{ind+1}</div>
+    })
+
+    
+    componentDidMount(){
+        this.getNews();
     }
   
     render() {
@@ -58,6 +74,7 @@ class All extends Component {
 
         if(this.state.data.length==0){
             return(
+                <>
                 <div className="loader">
                 <Loader 
                    type="Audio"
@@ -66,11 +83,13 @@ class All extends Component {
                    width="100"
                 />   
                 </div>
+                </>
                );
         }
 
     return (
       <div className="alldisplay2">
+          
         <div>{displayAll}</div> 
         <div className="pagination2">{this.pagination}</div> 
       </div>
