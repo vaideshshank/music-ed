@@ -24,7 +24,9 @@ footer>div:nth-child(3)>hr{width:150px;margin-right: 0}
 footer>div:nth-child(1) i{
     font-size:20px;
     margin-right:30px;
+    cursor:pointer;
 }
+footer>div:nth-child(1) i:hover{color:#ffffffc0;}
 
 footer .mobileDisp{
     display: none;
@@ -47,8 +49,9 @@ footer>div:nth-child(1) .mobileDisp{display:none;}
 footer>div:nth-child(3)>span{
     margin-right:10px;
     margin-left:10px;
+    cursor:pointer;
 }
-
+footer>div:nth-child(3)>span:hover{color:#ffffffc0;}
 footer>div:nth-child(3) pre{display: inline;}
 
 @media screen and (max-width:800px){

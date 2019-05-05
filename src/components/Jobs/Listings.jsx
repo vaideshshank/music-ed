@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import '../../stylesheets/Jobs/Listings.css'
 import Loader from 'react-loader-spinner';
+import _ from 'lodash';
 
 //material components
 // import Input from '@material-ui/core/Input';
@@ -11,7 +12,8 @@ import Loader from 'react-loader-spinner';
 class Listings extends Component {
         
     state={
-        skills:[]
+        skills:[],
+        frontendData:this.props.data
     }
 
     addSkill=(e)=>{
@@ -33,6 +35,10 @@ class Listings extends Component {
         this.setState({
             skills:skills
         })
+    }
+
+    search=(e)=>{
+       // document
     }
 
   render() {
@@ -114,7 +120,7 @@ class Listings extends Component {
             <div className="listings">
                 <div>
                     <div>
-                    <input type="text" className="search" placeholder="Search for Jobs"/>
+                    <input type="text" className="search" placeholder="Search for Jobs" onKeyPress={this.search}/>
                     <button>Search</button>
                     </div>
                     <div className="jobs">

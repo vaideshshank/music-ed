@@ -34,12 +34,15 @@ const Links=()=>{
 }
 
 const Options=()=>{
+    var redirect=(link)=>{
+        window.location=`/${link}`;
+    }
     return(
        <div>
             Join us<br/>
             <hr/>
-            <span>SIGN IN</span><pre>|</pre>
-            <span>REGISTER</span>
+            <span onClick={()=>redirect("signin")}>SIGN IN</span><pre>|</pre>
+            <span onClick={()=>redirect("signup")}>REGISTER</span>
         </div>
     )
 }
