@@ -7,14 +7,14 @@ var {jobs}=require('./../data/jobs.json');
 var {featured} =require('./../data/news.json');
 
 
-
 class Jobs extends Component {
   state={
     jobs:[]
   }
 
   componentWillMount(){
-    axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/jobs")
+    
+    axios.get(process.env.REACT_APP_MUSICED_BACKEND+"/api/jobs")
     .then(({data})=>{
         //console.log(data.data);
         this.setState(prevState=>({

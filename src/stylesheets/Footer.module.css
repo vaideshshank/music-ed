@@ -63,7 +63,7 @@ footer>div:nth-child(3) pre{display: inline;}
     }
 
     body footer>div:nth-child(1) i{display: none;}
-    body footer{
+    body footer{    
         font-size:3vw;
         justify-content: space-around;
         margin-top:20px;

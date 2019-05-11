@@ -22,7 +22,7 @@ class All extends Component {
     }
 
     getNews=()=>{
-        axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news&page="+this.state.index)
+        axios.get(process.env.REACT_APP_MUSICED_BACKEND+"/api/articles?kind=news&page="+this.state.index)
         .then(({data})=>{
             //console.log(data.data);
             this.setState(prevState=>({

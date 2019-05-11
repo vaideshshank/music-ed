@@ -106,7 +106,7 @@ class Featured extends PureComponent{
                   images.slice(0,3).map((val,ind)=>{
                       return (
                           <div key={ind}>
-                          <img src="http://142.93.38.157:5000/static/img/default.jpg" alt="" key={ind}/>
+                          <img src={process.env.REACT_APP_IMAGE} alt="" key={ind}/>
                           <span>{this.props.data[ind].heading}</span>
                           <span>{this.props.data[ind].date}</span>
                           </div>

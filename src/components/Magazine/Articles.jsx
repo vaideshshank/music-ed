@@ -19,7 +19,7 @@ const Magazine=(props)=>{
                                     <span>London Music</span>
                                     <span>{val.description}</span>
                                 </span>
-                                <span><img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/></span>
+                                <span><img src={process.env.REACT_APP_IMAGE} alt=""/></span>
                             </div>
                         )
                     })

@@ -26,7 +26,7 @@ const All=(props)=>{
                     return(
                         <div key={ind}>
                             <div>
-                                <img src="http://142.93.38.157:5000/static/img/default.jpg" alt=""/>
+                                <img src={process.env.REACT_APP_IMAGE} alt=""/>
                                 <i className="fa fa-bookmark-o" aria-hidden="true" onClick={select}></i>
                             </div>
                             <span>{val.title}</span>

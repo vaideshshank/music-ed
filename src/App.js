@@ -11,8 +11,10 @@ import Signup from './components/Signup/Signup';
 import Signin from './components/Signin/Signin';
 import Projects from './components/Projects';
 import Resource from './components/Resource';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
 import axios from 'axios';
+
 // const dotenv=require('dotenv');
 // dotenv.config();
 
@@ -43,6 +45,7 @@ class App extends Component {
             <Route path="/signin" component={Signin}/>
             <Route path="/projects" component={Projects}/>
             <Route path="/resource" component={Resource}/>
+            <PrivateRoute exact path="/news/jobs" component={Jobs} altPath="/signin"/>
           <Footer/>
         </div>
       </BrowserRouter>

@@ -41,7 +41,8 @@ export default class LatestNews extends PureComponent {
     // }
 
     componentDidMount(){
-        axios.get("https://cors-anywhere.herokuapp.com/http://142.93.38.157:5000/api/articles?kind=news")
+        //console.log("BACKANE : " +JSON.stringify(process.env,null,2));
+        axios.get(process.env.REACT_APP_MUSICED_BACKEND+"/api/articles?kind=news")
         .then(({data})=>{
             //console.log(data.data);
             this.setState(prevState=>({
